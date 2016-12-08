@@ -23,7 +23,8 @@
   font-family: $title-font;
   line-height: $title-line-height;
   font-size: $title-size;
-  letter-spacing: 2px;
+  font-weight: bold;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
@@ -33,6 +34,7 @@
 
 h2 {
   @include title-type;
+  color: $action-color;
 }
 
 p {

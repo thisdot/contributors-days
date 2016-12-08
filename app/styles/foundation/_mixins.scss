@@ -1,0 +1,8 @@
+@mixin makeLogo($url, $width, $height) {
+  display: block;
+  text-indent: -10000px;
+  overflow: hidden;
+  background: url($url) center center / contain no-repeat;
+  width: $width;
+  height: $height;
+}

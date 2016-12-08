@@ -1,0 +1,51 @@
+.rx-day-logo {
+  @include makeLogo('images/rx-day-logo.svg', 118px, 82px)
+}
+
+.angular-day-logo {
+  @include makeLogo('images/angular-day-logo.svg', 118px, 82px)
+}
+
+.react-day-logo {
+  @include makeLogo('images/react-day-logo.svg', 118px, 82px)
+}
+
+.upcoming-days {
+  .day-card {
+    background: $alt-color;
+    border-radius: 4px;
+    position: relative;
+    text-align: center;
+    margin-top: 100px;
+    box-sizing: border-box;
+    color: $main-color;
+
+    .day-logo {
+      box-sizing: border-box;
+      background-color: #fff;
+      background-size: 118px 82px;
+      border: 10px solid $alt-color;
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 160px;
+      height: 160px;
+      border-radius: 120px;
+    }
+    h3 {
+      padding: 90px 0 0 0;
+      font-size: 23px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 24px;
+    }
+    footer {
+      padding: unit-space(1) 0;
+      .button.action-button {
+        margin-right: unit-space(1);
+      }
+    }
+  }
+}

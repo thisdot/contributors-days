@@ -6,12 +6,7 @@
     padding-bottom: unit-space(1);
     border-bottom: 2px solid $action-color;
     a {
-      text-indent: -10000px;
-      overflow: hidden;
-      display: block;
-      background: url(images/cd-logo.svg) center / contain no-repeat;
-      width: 260px;
-      height: 150px;
+      @include makeLogo('images/cd-logo.svg', 260px, 150px);
       max-width: 100%;
     }
   }

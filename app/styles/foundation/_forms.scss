@@ -1,17 +1,23 @@
 .button {
-  background: $main-color;
+  background: none;
   border: none;
   outline: none;
-  color: #fff;
-  @include title-type();
+  @include body-copy();
+  border: 2px solid $main-color;
   font-size: 24px;
+  font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
   box-sizing: border-box;
-  padding: 1px 20px 0 15px;
-  border-radius: 50px;
+  padding: unit-space(0.5) unit-space(1);
+  border-radius: 4px;
   cursor: pointer;
+  &.action-button {
+    background: $action-color;
+    border-color: $action-color;
+    color: #fff;
+  }
 }
 
 .input-text {

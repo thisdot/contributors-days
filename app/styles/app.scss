@@ -2,6 +2,13 @@
 @import 'modules/header';
 @import 'modules/terminal';
 
+@import 'modules/index';
+
 body {
   @include body-copy();
+}
+
+.content-section {
+  margin-top: unit-space(2);
+  margin-bottom: unit-space(2);
 }
