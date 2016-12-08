@@ -1,0 +1,59 @@
+.terminal-wrap {
+  background: #fff;
+  padding: unit-space(0.5);
+  border-radius: 4px;
+  @include desktop() {
+    padding: unit-space(1) unit-space(2) unit-space(0.5) unit-space(2);
+  }
+}
+
+.terminal {
+  font-family: $title-font;;
+  font-size: 18px;
+  line-height: 24px;
+  overflow-y: scroll;
+  height: 360px;
+
+  @include desktop() {
+    height: 480px;
+  }
+
+  p {
+    margin: 14px 0;
+  }
+
+  ul {
+    margin-left: unit-space(1);
+  }
+
+  .terminal-command, .terminal-prompt {
+    font-weight: bold;
+    &:before {
+      content: '>';
+      color: $action-color;
+    }
+  }
+
+  .terminal-prompt {
+    line-height: 24px;
+  }
+
+  .command-input {
+    display: inline-block;
+    width: 80%;
+    font-family: $title-font;;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    border-left: 3px solid rgba($main-color, 0);
+    animation: flash-border 1s linear 0s infinite;
+    &:focus {
+      animation: none;
+      border-color: rgba($main-color, 0);
+    }
+  }
+
+}

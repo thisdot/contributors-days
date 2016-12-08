@@ -1,0 +1,46 @@
+.button {
+  background: $main-color;
+  border: none;
+  outline: none;
+  color: #fff;
+  @include title-type();
+  font-size: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 1px 20px 0 15px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.input-text {
+  outline: none;
+  margin: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  border-radius: 50px;
+  border: 2px solid $main-color;
+  @include body-copy();
+  font-size: 16px;
+}
+
+.input-button {
+  @include clearfix();
+  .button {
+    border-radius: 0 50px 50px 0;
+    display: block;
+    float: left;
+  }
+  .input-text {
+    border-radius: 50px 0 0 50px;
+    border-right: none;
+    display: block;
+    float: left;
+  }
+}
+
+input[type='email'] {
+  @extend .input-text;
+}

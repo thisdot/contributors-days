@@ -1,0 +1,47 @@
+@mixin body-copy {
+  font-family: $body-font;
+  font-size: $body-size;
+  line-height: $body-line-height;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  color: $text-color;
+  em {
+    font-style: italic;
+  }
+  strong {
+    font-weight: 600;
+  }
+}
+
+@mixin large-body {
+  @include body-copy;
+  font-size: $body-size * 1.6;
+  line-height: $body-line-height * 1.6;
+}
+
+@mixin title-type {
+  font-family: $title-font;
+  line-height: $title-line-height;
+  font-size: $title-size;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@function unit-space($amount) {
+  @return $amount * 20px;
+}
+
+h2 {
+  @include title-type;
+}
+
+p {
+  margin-top: unit-space(1);
+}
+
+.subtitle {
+  @include body-copy();
+  font-style: italic;
+  font-weight: 600;
+  color: $alt-color;
+}

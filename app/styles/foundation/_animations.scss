@@ -1,0 +1,9 @@
+@keyframes flash-border {
+  from, 60% {
+    border-color: rgba($main-color, 1);
+  }
+
+  to, 80% {
+    border-color: rgba($main-color, 0);
+  }
+}

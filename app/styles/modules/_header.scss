@@ -1,0 +1,37 @@
+.app-header {
+  background: $alt-color;
+  padding: unit-space(2) 0;
+
+  h1 {
+    padding-bottom: unit-space(1);
+    border-bottom: 2px solid $action-color;
+    a {
+      text-indent: -10000px;
+      overflow: hidden;
+      display: block;
+      background: url(images/cd-logo.svg) center / contain no-repeat;
+      width: 260px;
+      height: 150px;
+      max-width: 100%;
+    }
+  }
+
+  .titles {
+    br {
+      display: none;
+    }
+    @include desktop() {
+      br {
+        display: block;
+      }
+    }
+  }
+
+  @include desktop() {
+    padding: unit-space(4);
+    .row {
+      align-items: center;
+    }
+  }
+
+}

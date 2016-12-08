@@ -1,0 +1,14 @@
+$enable-flex: true;
+@import 'bootstrap-grid';
+
+.col-md-4, .col-md-3, .col-md-2 {
+  box-sizing: border-box;
+}
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
