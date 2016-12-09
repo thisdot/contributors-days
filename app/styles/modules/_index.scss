@@ -45,14 +45,14 @@
       padding: unit-space(1) 0;
       .button.action-button {
         margin-right: unit-space(1);
+        vertical-align: bottom;
+      }
+      em {
+        display: inline-block;
+        font-style: normal;
+        max-width: 140px;
+        text-align: left;
       }
     }
-  }
-}
-
-.contact-row {
-  a {
-    color: $action-color;
-    font-weight: bold;
   }
 }

@@ -26,3 +26,12 @@
 .this-dot-dot {
   @include makeLogo('images/this-dot-o.svg', 162px, 158px);
 }
+
+.contact-row {
+  border-top: 2px solid $alt-color;
+  padding-top: unit-space(2);
+  a {
+    color: $action-color;
+    font-weight: bold;
+  }
+}
