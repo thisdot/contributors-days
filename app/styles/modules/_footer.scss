@@ -1,0 +1,28 @@
+.app-footer {
+  background: $main-color;
+  padding: unit-space(4) 0;
+  margin-top: unit-space(3);
+  color: #fff;
+
+  .links {
+    a {
+      font-family: $body-font;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
+    }
+    strong  {
+      font-weight: bold;
+      border-bottom: 3px dotted $action-color;
+    }
+  }
+  p {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+.this-dot-dot {
+  @include makeLogo('images/this-dot-o.svg', 162px, 158px);
+}

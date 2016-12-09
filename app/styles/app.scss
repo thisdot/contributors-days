@@ -1,5 +1,6 @@
 @import 'foundation/all';
 @import 'modules/header';
+@import 'modules/footer';
 @import 'modules/terminal';
 
 @import 'modules/index';
@@ -11,4 +12,16 @@ body {
 .content-section {
   margin-top: unit-space(2);
   margin-bottom: unit-space(2);
+
+  h2 {
+    margin-bottom: unit-space(2);
+  }
+
+  .row {
+    margin-bottom: unit-space(2);
+  }
+
+  img {
+    max-width: 100%;
+  }
 }
