@@ -1,0 +1,22 @@
+<div class="terminal">
+  <p>
+    <strong>Hi! Welcome to Contributors Day introduction.</strong><
+  </p>
+  {{#each pastCommands as |command|}}
+    <p class="terminal-command">
+      {{command.text}}
+    </p>
+    {{component command.component options=command.options class="terminal-result"}}
+  {{/each}}
+
+  <div class="terminal-prompt">
+    {{one-way-input promptText
+        class="command-input"
+        update=(action (mut promptText))
+        autocomplete="off"
+        keyEvents=(hash
+          13=(action "inputCommand" promptText)
+        )
+    }}
+  </div>
+</div>

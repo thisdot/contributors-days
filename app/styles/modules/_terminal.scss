@@ -2,8 +2,11 @@
   background: #fff;
   padding: unit-space(0.5);
   border-radius: 4px;
+  height: 360px;
+  overflow-y: scroll;
   @include desktop() {
     padding: unit-space(1) unit-space(2) unit-space(0.5) unit-space(2);
+    height: 480px;
   }
 }
 
@@ -11,12 +14,7 @@
   font-family: $title-font;;
   font-size: 18px;
   line-height: 24px;
-  overflow-y: scroll;
-  height: 360px;
-
-  @include desktop() {
-    height: 480px;
-  }
+  padding-bottom: unit-space(1);
 
   p {
     margin: 14px 0;
