@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('contributor-day', { path: 'contributors-day/:framework' });
 });
 
 export default Router;

@@ -1,0 +1,58 @@
+.about-day {
+  @include mobileOnly() {
+    text-align: center;
+  }
+  .framework-logo {
+    img {
+      width: 50%;
+      margin-top: unit-space(1);
+    }
+    @include tablet() {
+      text-align: right;
+    }
+  }
+
+  p {
+    margin-top: unit-space(2);
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  h1 {
+    @include title-type();
+    color: $action-color;
+    font-size: 21px;
+  }
+
+  h2 {
+    color: darken($alt-color, 50);
+    margin-top: unit-space(2);
+    line-height: 28px;
+    @include tablet() {
+      text-align: right;
+    }
+  }
+
+  .lead-card {
+    text-align: center;
+    margin-top: unit-space(2);
+    .lead-pic {
+      border-radius: 250px;
+      max-width: 250px;
+      overflow: hidden;
+      margin-bottom: unit-space(1);
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    strong {
+      display: block;
+    }
+  }
+}
+
+.go-back {
+  margin: unit-space(2) 0;
+  font-size: 18px;
+}

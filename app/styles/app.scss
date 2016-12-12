@@ -4,6 +4,7 @@
 @import 'modules/terminal';
 
 @import 'modules/index';
+@import 'modules/contributor-day';
 
 body {
   @include body-copy();
