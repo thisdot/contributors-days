@@ -2,11 +2,12 @@
   background: #fff;
   padding: unit-space(0.5);
   border-radius: 4px;
-  height: 360px;
+  height: 420px;
   overflow-y: scroll;
+  position: relative;
+
   @include desktop() {
     padding: unit-space(1) unit-space(2) unit-space(0.5) unit-space(2);
-    height: 480px;
   }
 }
 
@@ -16,12 +17,27 @@
   line-height: 24px;
   padding-bottom: unit-space(1);
 
+  &.sticky {
+    position: absolute;
+    bottom: 0;
+  }
+
   p {
     margin: 14px 0;
   }
 
+  a {
+    text-decoration: underline;
+    color: $text-color;
+  }
+
   ul {
     margin-left: unit-space(1);
+  }
+
+  ol {
+    list-style: decimal;
+    padding-left: unit-space(2);
   }
 
   .terminal-command, .terminal-prompt {
@@ -47,7 +63,7 @@
     border: none;
     outline: none;
     border-left: 8px solid rgba($main-color, 0);
-    animation: flash-border 3s linear 0s infinite;
+    animation: flash-border 5s linear 0s infinite;
     &:focus {
       animation: none;
       border-color: rgba($main-color, 0);

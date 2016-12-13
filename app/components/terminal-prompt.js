@@ -20,7 +20,6 @@ export default Ember.Component.extend({
   actions: {
     inputCommand(text) {
       let splitText = text.split(' ');
-      debugger;
       splitText = splitText.map(string => string.trim());
       let [command, ...options] = splitText;
 
@@ -47,8 +46,11 @@ export default Ember.Component.extend({
       }
 
       this.set('promptText', '');
-      // let terminalHeight = this.$('.terminal')[0].scrollHeight + 40;
-      // this.$('.terminal').scrollTop();
+      Ember.run.scheduleOnce('afterRender', this, function() {
+        let terminalHeight = this.$('.terminal').height();
+        let referenceHeight = 420;
+        this.set('sticky', terminalHeight > referenceHeight);
+      });
     }
   },
 
