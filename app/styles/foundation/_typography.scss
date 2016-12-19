@@ -53,3 +53,8 @@ p {
   font-weight: 600;
   color: $alt-color;
 }
+
+ol {
+  list-style: decimal;
+  padding-left: unit-space(2);
+}

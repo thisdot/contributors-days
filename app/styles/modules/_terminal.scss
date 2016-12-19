@@ -35,11 +35,6 @@
     margin-left: unit-space(1);
   }
 
-  ol {
-    list-style: decimal;
-    padding-left: unit-space(2);
-  }
-
   .terminal-command, .terminal-prompt {
     font-weight: bold;
     &:before {
