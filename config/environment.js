@@ -5,7 +5,8 @@ module.exports = function(environment) {
     modulePrefix: 'contributors-days',
     environment: environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'router-scroll',
+    historySupportMiddleware: true,
     googleFonts: [
       'Karla:400,700',
       'PT+Mono'
