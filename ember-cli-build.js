@@ -8,6 +8,9 @@ module.exports = function(defaults) {
       includePaths: [
         'bower_components/bootstrap/scss'
       ]
+    },
+    fingerprint: {
+     prepend: 'https://storage.googleapis.com/contributor-days-assets/'
     }
   });
 
