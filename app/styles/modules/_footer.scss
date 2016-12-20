@@ -4,34 +4,28 @@
   margin-top: unit-space(3);
   color: #fff;
 
-  .links {
+  h3 {
     a {
+      @include title-type();
       font-family: $body-font;
-      text-transform: uppercase;
-      letter-spacing: 2px;
       color: #fff;
       text-decoration: none;
       font-size: 24px;
     }
-    strong  {
-      font-weight: bold;
-      border-bottom: 3px dotted $action-color;
-    }
-  }
-  p {
-    font-size: 18px;
-    line-height: 27px;
   }
 }
 .this-dot-dot {
   @include makeLogo('images/this-dot-o.svg', 162px, 158px);
 }
-
-.contact-row {
-  border-top: 2px solid $alt-color;
-  padding-top: unit-space(2);
+.links {
+  @include title-type();
+  font-family: $body-font;
+  border-top: 1px solid #fff;
+  margin-top: unit-space(1);
   a {
-    color: $action-color;
-    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    margin: unit-space(1);
   }
+  font-size: 18px;
 }
