@@ -12,6 +12,7 @@ export default Ember.Route.extend({
       'agenda': 'commands/agenda-command',
       'frameworks': 'commands/frameworks-command',
       'apply': 'commands/apply-command',
+      'cat': 'commands/cat-command',
     };
 
     return commands;
