@@ -32,24 +32,6 @@
       text-align: right;
     }
   }
-
-  .lead-card {
-    text-align: center;
-    margin-top: unit-space(2);
-    .lead-pic {
-      border-radius: 250px;
-      max-width: 250px;
-      overflow: hidden;
-      margin-bottom: unit-space(1);
-    }
-    img {
-      max-width: 100%;
-      display: block;
-    }
-    strong {
-      display: block;
-    }
-  }
 }
 
 .go-back {

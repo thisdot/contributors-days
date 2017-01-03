@@ -1,0 +1,21 @@
+.person-card {
+  text-align: center;
+  margin-top: unit-space(2);
+  .person-pic {
+    border-radius: 250px;
+    max-width: 250px;
+    overflow: hidden;
+    margin-bottom: unit-space(1);
+  }
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  strong {
+    display: block;
+  }
+  a {
+    color: darken($alt-color, 50);
+    border-bottom: 1px solid darken($alt-color, 20);
+  }
+}

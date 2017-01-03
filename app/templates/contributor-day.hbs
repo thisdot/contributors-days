@@ -27,25 +27,31 @@
     <h2 class="col-md-4">Leads</h2>
     <div class="col-md-6">
       <div class="row">
-        <div class="col-md-4 lead-card">
-          <div class="lead-pic">
+        <div class="col-md-4 person-card">
+          <div class="person-pic">
             <img src="/media/people/ben-lesh.png" alt="Ben Lesh" />
           </div>
-          <strong>Ben Lesh</strong>
+          <strong>
+            <a href="https://github.com/blesh" target="_blank">Ben Lesh</a>
+          </strong>
           RxJs Lead
         </div>
-        <div class="col-md-4 lead-card">
-          <div class="lead-pic">
+        <div class="col-md-4 person-card">
+          <div class="person-pic">
             <img src="/media/people/paul-taylor.jpeg" alt="Paul Taylor" />
           </div>
-          <strong>Paul Taylor</strong>
+          <strong>
+            <a href="https://github.com/trxcllnt" target="_blank">Paul Taylor</a>
+          </strong>
           RxJs Core Team
         </div>
-        <div class="col-md-4 lead-card">
-          <div class="lead-pic">
+        <div class="col-md-4 person-card">
+          <div class="person-pic">
             <img src="/media/people/jay-phelps.jpg" alt="Jay Phelps" />
           </div>
-          <strong>Jay Phelps</strong>
+          <strong>
+            <a href="https://github.com/jayphelps" target="_blank">Jay Phelps</a>
+          </strong>
           RxJs Core Team
         </div>
       </div>
@@ -65,5 +71,14 @@
     <p class="col-md-6">
       <a href="https://goo.gl/forms/ZHeeaJmjiJgYH0Vv2" class="button action-button" target="_blank">Apply</a>
     </p>
+
+    <h2 class="col-md-4">Atendees</h2>
+    <div class="col-md-6">
+      <div class="row">
+        {{#each (sort-by 'order' model) as |atendee|}}
+          {{person-card person=atendee class="col-md-4"}}
+        {{/each}}
+      </div>
+    </div>
   </div>
 </div>
