@@ -10,7 +10,10 @@ module.exports = function(defaults) {
       ]
     },
     fingerprint: {
-     prepend: 'https://storage.googleapis.com/contributor-days-assets/'
+      prepend: '//storage.googleapis.com/contributor-days-assets/',
+      replaceExtensions: ['html', 'js', 'css', 'json'],
+      exclude: ['assets/assetMap.json'],
+      ignore: ['assets/assetMap.json']
     }
   });
 
