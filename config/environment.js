@@ -53,7 +53,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.host = storageHost;
+    ENV.namespace = 'contributor-days-assets/api/blog';
   }
 
   return ENV;
