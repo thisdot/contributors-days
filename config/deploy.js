@@ -7,7 +7,9 @@ module.exports = function(deployTarget) {
       key: 'fastboot-release.json'
     },
     'gcloud-storage': {
-        bucket: 'contributor-days-assets'
+      projectId: 'contributor-days',
+      bucket: 'contributor-days-assets',
+      filePattern: '**/*.{js,css,png,gif,ico,jpg,map,xml,txt,svg,swf,eot,ttf,woff,woff2,json}'
     }
   };
 };
