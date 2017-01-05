@@ -1,6 +1,6 @@
 ---
 name: Andre Staltz
-title: RxJS Contributor
+title: RxJS Core Team
 twitter: andrestaltz
 github: https://github.com/staltz
 image: /media/people/andre-staltz.jpg
