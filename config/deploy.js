@@ -1,6 +1,6 @@
 /* jshint node: true */
 
-module.exports = function(deployTarget) {
+module.exports = function() {
   return {
     'gcloud': {
       bucket: 'contributor-days-assets',
