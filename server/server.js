@@ -10,9 +10,9 @@ nconf.file({ file: 'config.json' });
 
 const GCS_BUCKET = nconf.get('bucket');
 const GCS_KEY    = nconf.get('key');
-const FASTBOOT_REDIS_HOST = nconf.get('redis_host');
-const FASTBOOT_REDIS_PORT = nconf.get('redis_port');
-const FASTBOOT_REDIS_PASSWORD = nconf.get('redis_password');
+const FASTBOOT_REDIS_HOST = nconf.get('redisHost');
+const FASTBOOT_REDIS_PORT = nconf.get('redisPort');
+const FASTBOOT_REDIS_PASSWORD = nconf.get('redisPassword');
 
 let downloader = new GCloudStorageDownloader({
   bucket: GCS_BUCKET,
