@@ -4,7 +4,7 @@ title: Creator, Angular
 twitter: mhevery
 github: https://github.com/mhevery
 image: /media/people/misko-hevery.jpg
-featured: cd-rxjs
+featured: 
 frameworks: angular
 order: 5
 ---
