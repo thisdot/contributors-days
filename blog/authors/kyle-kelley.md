@@ -1,6 +1,6 @@
 ---
 name: Kyle Kelley
-title: Netflix, Redux, Observable
+title: Netflix, redux-observable
 github: https://github.com/rgbkrk
 image: /media/people/kyle-kelley.jpg
 featured: cd-rxjs
