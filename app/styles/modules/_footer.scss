@@ -15,7 +15,7 @@
   }
 }
 .this-dot-dot {
-  @include makeLogo('images/this-dot-o.svg', 162px, 158px);
+  @include makeLogo('images/this-dot-o.svg', 142px, 80px);
 }
 .links {
   @include title-type();
