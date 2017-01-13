@@ -9,7 +9,10 @@ module.exports = function() {
     'gcloud-storage': {
       projectId: 'contributor-days',
       bucket: 'contributor-days-assets',
-      filePattern: '**/*.{js,css,png,gif,ico,jpg,map,xml,txt,svg,swf,eot,ttf,woff,woff2,json}'
+      filePattern: '**/*.{js,css,png,gif,ico,jpg,map,xml,txt,svg,swf,eot,ttf,woff,woff2,json}',
+      metadata: {
+        cacheControl: 'public, max-age=31536000'
+      }
     }
   };
 };
