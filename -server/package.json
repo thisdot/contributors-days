@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gcloud app deploy --project=contributor-days --no-promote"
+    "deploy": "gcloud app deploy --project=contributor-days",
+    "no-promote": "gcloud app deploy --project=contributor-days --no-promote"
   },
   "engines": {
     "node": "~5.3"
@@ -21,7 +22,7 @@
     "fastboot-app-server": "^1.0.0-rc.5",
     "fastboot-gcloud-storage-downloader": "^0.1.0",
     "fastboot-gcloud-storage-notifier": "^0.1.0",
-    "fastboot-redis-cache": "taras/fastboot-redis-cache#add-password-option",
+    "fastboot-redis-cache": "taras/fastboot-redis-cache#76a8ad686b87acc2013bd5fa0832c4e11a4ccbd5",
     "nconf": "0.8.4"
   }
 }
