@@ -6,7 +6,7 @@ const FastBootAppServer       = require('fastboot-app-server');
 const RedisCache              = require('fastboot-redis-cache');
 const nconf                   = require('nconf');
 
-nconf.file({ file: 'config.json' });
+nconf.file({ file: 'config.enc.json' });
 
 const GCS_BUCKET = nconf.get('bucket');
 const GCS_KEY    = nconf.get('key');
