@@ -53,6 +53,19 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.analytics = {
+      integrations: [
+        {
+          name: 'GoogleAnalytics',
+          config: {
+            id: 'UA-87303561-4',
+            remarketing: true,
+            ecommerce: true,
+            enhancedEcommerce: false
+          }
+        }
+      ]
+    };
     ENV.host = storageHost;
     ENV.namespace = 'contributor-days-assets/api/blog';
   }
