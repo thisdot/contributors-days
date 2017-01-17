@@ -11,7 +11,7 @@
     "build": "ember build",
     "start": "ember server",
     "test": "ember test",
-    "deploy": "GCLOUD_PROJECT=contributor-days ember deploy production"
+    "deploy": "GCLOUD_PROJECT=this-dot ember deploy production"
   },
   "repository": "",
   "engines": {

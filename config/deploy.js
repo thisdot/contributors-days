@@ -3,12 +3,12 @@
 module.exports = function() {
   return {
     'gcloud': {
-      bucket: 'contributor-days-assets',
+      bucket: 'contributor-days',
       key: 'fastboot-release.json'
     },
     'gcloud-storage': {
-      projectId: 'contributor-days',
-      bucket: 'contributor-days-assets',
+      projectId: 'this-dot',
+      bucket: 'contributor-days',
       filePattern: '**/*.{js,css,png,gif,ico,jpg,map,xml,txt,svg,swf,eot,ttf,woff,woff2,json}',
       metadata: {
         cacheControl: 'public, max-age=31536000'
