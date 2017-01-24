@@ -5,10 +5,10 @@
   </header>
   <div class="row">
     <div class="col-md-4 framework-logo">
-      <img src="/assets/images/rx-day-logo.svg" alt="" />
+      <img src="/assets/images/{{concat model.event.slug '-day-logo'}}.svg" alt="" />
     </div>
     <div class="col-md-6">
-      <h1>RxJS Contributor Days</h1>
+      <h1>{{model.event.title}}</h1>
       <p>
         Contributor Days strives to create stronger relationships and focus in the existing community while providing an opportunity for other developers who may not have contributed to the specific project a chance to explore new opportunities.
       </p>
@@ -16,44 +16,20 @@
 
     <h2 class="col-md-4">When</h2>
     <p class="col-md-6">
-      02/03/2017
+      {{moment-format model.event.date 'MM/DD/YYYY'}}
     </p>
 
     <h2 class="col-md-4">Where</h2>
     <p class="col-md-6">
-      Silicon Valley
+      {{model.event.location}}
     </p>
 
     <h2 class="col-md-4">Leads</h2>
     <div class="col-md-6">
       <div class="row">
-        <div class="col-md-4 person-card">
-          <div class="person-pic">
-            <img src="/media/people/ben-lesh.png" alt="Ben Lesh" />
-          </div>
-          <strong>
-            <a href="https://github.com/blesh" target="_blank">Ben Lesh</a>
-          </strong>
-          RxJs Lead
-        </div>
-        <div class="col-md-4 person-card">
-          <div class="person-pic">
-            <img src="/media/people/paul-taylor.jpeg" alt="Paul Taylor" />
-          </div>
-          <strong>
-            <a href="https://github.com/trxcllnt" target="_blank">Paul Taylor</a>
-          </strong>
-          RxJs Core Team
-        </div>
-        <div class="col-md-4 person-card">
-          <div class="person-pic">
-            <img src="/media/people/jay-phelps.jpg" alt="Jay Phelps" />
-          </div>
-          <strong>
-            <a href="https://github.com/jayphelps" target="_blank">Jay Phelps</a>
-          </strong>
-          RxJs Core Team
-        </div>
+        {{#each (sort-by 'order' (filter-by 'featured' (concat 'lead-' model.event.slug) model.people)) as |atendee|}}
+          {{person-card person=atendee class="col-md-4"}}
+        {{/each}}
       </div>
     </div>
 
@@ -69,16 +45,20 @@
 
     <h2 class="col-md-4">Ready?</h2>
     <p class="col-md-6">
-      <a href="https://goo.gl/forms/ZHeeaJmjiJgYH0Vv2" class="button action-button" target="_blank">Apply</a>
+      <a href="{{model.event.apply}}" class="button action-button" target="_blank">Apply</a>
     </p>
 
-    <h2 class="col-md-4">Attendees</h2>
-    <div class="col-md-6">
-      <div class="row">
-        {{#each (sort-by 'order' (filter-by 'featured' 'cd-rxjs' model)) as |atendee|}}
-          {{person-card person=atendee class="col-md-4"}}
-        {{/each}}
-      </div>
-    </div>
+    {{#with (sort-by 'order' (filter-by 'featured' (concat 'cd-' model.event.slug) model.people)) as |attendees|}}
+      {{#if attendees}}
+        <h2 class="col-md-4">Attendees</h2>
+        <div class="col-md-6">
+          <div class="row">
+            {{#each attendees as |attendee|}}
+              {{person-card person=attendee class="col-md-4"}}
+            {{/each}}
+          </div>
+        </div>
+      {{/if}}
+    {{/with}}
   </div>
 </div>
