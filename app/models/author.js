@@ -5,7 +5,7 @@ export default Author.extend({
   title: attr('string'),
   twitter: attr('string'),
   github: attr('string'),
-  featured: attr('string'),
+  featured: attr(),
   image: attr('string'),
   order: attr('number')
 });

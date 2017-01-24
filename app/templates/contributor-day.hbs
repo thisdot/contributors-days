@@ -27,8 +27,8 @@
     <h2 class="col-md-4">Leads</h2>
     <div class="col-md-6">
       <div class="row">
-        {{#each (sort-by 'order' (filter-by 'featured' (concat 'lead-' model.event.slug) model.people)) as |atendee|}}
-          {{person-card person=atendee class="col-md-4"}}
+        {{#each leads as |lead|}}
+          {{person-card person=lead class="col-md-4"}}
         {{/each}}
       </div>
     </div>
@@ -48,17 +48,15 @@
       <a href="{{model.event.apply}}" class="button action-button" target="_blank">Apply</a>
     </p>
 
-    {{#with (sort-by 'order' (filter-by 'featured' (concat 'cd-' model.event.slug) model.people)) as |attendees|}}
-      {{#if attendees}}
-        <h2 class="col-md-4">Attendees</h2>
-        <div class="col-md-6">
-          <div class="row">
-            {{#each attendees as |attendee|}}
-              {{person-card person=attendee class="col-md-4"}}
-            {{/each}}
-          </div>
+    {{#if attendees}}
+      <h2 class="col-md-4">Attendees</h2>
+      <div class="col-md-6">
+        <div class="row">
+          {{#each attendees as |attendee|}}
+            {{person-card person=attendee class="col-md-4"}}
+          {{/each}}
         </div>
-      {{/if}}
-    {{/with}}
+      </div>
+    {{/if}}
   </div>
 </div>
