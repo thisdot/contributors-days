@@ -9,6 +9,9 @@ const Router = Ember.Router.extend(Trackable, {
 
 Router.map(function() {
   this.route('contributor-day', { path: 'contributor-days/:framework' });
+  this.route('health-checker', { path: '_ah' }, function() {
+    this.route('health');
+  });
 });
 
 export default Router;
