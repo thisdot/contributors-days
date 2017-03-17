@@ -5,5 +5,5 @@ twitter: tzmanics
 github: https://github.com/tzmanics
 image: /media/people/tara-manicsic.jpg
 featured: cd-angular
-order: 90
+order: 30
 ---

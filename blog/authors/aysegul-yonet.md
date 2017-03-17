@@ -6,5 +6,5 @@ image: /media/people/aysegul-yonet.png
 featured: 
     - cd-rxjs
     - cd-angular
-order: 100
+order: 60
 ---
