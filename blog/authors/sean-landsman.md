@@ -1,5 +1,5 @@
 ---
-name: sean Landsman
+name: Sean Landsman
 title: agGrid
 twitter: seanlandsman
 github: https://github.com/seanlandsman
