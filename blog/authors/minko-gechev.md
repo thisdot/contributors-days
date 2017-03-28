@@ -1,9 +1,11 @@
 ---
 name: Minko Gechev
-title: Angular Contributor
+title: Google Developer Expert
 twitter: mgechev
 github: https://github.com/mgechev
 image: /media/people/minko-gechev.jpg
-featured: cd-rxjs
+featured: 
+    - cd-rxjs
+    - cd-angular
 order: 60
 ---
