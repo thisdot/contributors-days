@@ -67,7 +67,7 @@ module.exports = function(environment) {
       ]
     };
     ENV.host = storageHost;
-    ENV.namespace = 'contributor-days-assets/api/blog';
+    ENV.namespace = 'contributor-days/api/blog';
   }
 
   return ENV;
