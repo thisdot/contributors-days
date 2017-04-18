@@ -1,0 +1,21 @@
+<div class="day-card">
+  <em class="{{event.framework}} day-logo"></em>
+  <h3>
+    {{event.title}}
+  </h3>
+  <p>
+    {{moment-format event.date 'MM/DD/YYYY'}}
+    <br>
+    {{event.location}}
+  </p>
+  <footer>
+    <a href="{{event.apply}}" class="button action-button" target="_blank">
+      Apply
+    </a>
+    {{#if event.location}}
+      {{#link-to 'contributor-day' event.slug class="button"}}
+        + info
+      {{/link-to}}
+    {{/if}}
+  </footer>
+</div>

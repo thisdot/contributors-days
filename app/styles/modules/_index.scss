@@ -1,14 +1,14 @@
-.rx-day-logo {
-  @include makeLogo('images/rxjs-day-logo.svg', 118px, 82px)
-}
-
-.angular-day-logo {
-  @include makeLogo('images/angular-day-logo.svg', 118px, 82px)
-}
-
-.react-day-logo {
-  @include makeLogo('images/react-day-logo.svg', 118px, 82px)
-}
+// .rxjs-day-logo {
+//   @include makeLogo('images/rxjs-day-logo.svg', 118px, 82px)
+// }
+//
+// .angular-day-logo {
+//   @include makeLogo('images/angular-day-logo.svg', 118px, 82px)
+// }
+//
+// .react-day-logo {
+//   @include makeLogo('images/react-day-logo.svg', 118px, 82px)
+// }
 
 .upcoming-days {
   .day-card {
@@ -23,15 +23,19 @@
     .day-logo {
       box-sizing: border-box;
       background-color: #fff;
-      background-size: 118px 82px;
       border: 10px solid $alt-color;
       position: absolute;
       top: -80px;
       left: 50%;
       transform: translateX(-50%);
-      width: 160px;
-      height: 160px;
       border-radius: 120px;
+
+      @each $framework in $frameworks {
+        &.#{$framework} {
+          @include makeLogo('images/#{$framework}-day-logo.svg', 160px, 160px);
+          background-size: 118px 82px;
+        }
+      }
     }
     h3 {
       padding: 90px 0 0 0;

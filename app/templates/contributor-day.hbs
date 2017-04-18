@@ -1,3 +1,21 @@
+<header class="app-header">
+  <div class="container">
+    <div class="row">
+      <div class="titles col-md-4">
+        <h1>
+          {{#link-to 'index'}}Contributor Days{{/link-to}}
+        </h1>
+        <p>
+          Make open source, not war.
+        </p>
+      </div>
+      <div class="col-md-7 push-lg-1">
+        {{terminal-prompt commands=model.commands}}
+      </div>
+    </div>
+  </div>
+</header>
+
 {{outlet}}
 <div class="container about-day">
   <header>

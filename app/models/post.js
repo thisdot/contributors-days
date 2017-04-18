@@ -3,5 +3,6 @@ import attr from 'ember-data/attr';
 
 export default Post.extend({
   location: attr('string'),
-  apply: attr('string')
+  apply: attr('string'),
+  framework: attr('string')
 });

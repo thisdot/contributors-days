@@ -2,7 +2,10 @@
   display: block;
   text-indent: -10000px;
   overflow: hidden;
-  background: url($url) center center / contain no-repeat;
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
   width: $width;
   height: $height;
 }

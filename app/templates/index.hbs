@@ -1,44 +1,26 @@
+<header class="app-header">
+  <div class="container">
+    <div class="row">
+      <div class="titles col-md-4">
+        <h1>
+          {{#link-to 'index'}}Contributor Days{{/link-to}}
+        </h1>
+        <p>
+          Make open source, not war.
+        </p>
+      </div>
+      <div class="col-md-7 push-lg-1">
+        {{terminal-prompt commands=model.commands}}
+      </div>
+    </div>
+  </div>
+</header>
+
 <section class="container content-section">
   <h2>Upcoming contributor days</h2>
   <div class="row upcoming-days">
-    <div class="col-md-4">
-      <div class="day-card">
-        <em class="rx-day-logo day-logo"></em>
-        <h3 class="">Rx Contributor Days</h3>
-        <p>
-          02/03/2017 <br> Silicon Valley
-        </p>
-        <footer>
-          <a href="https://goo.gl/forms/ZHeeaJmjiJgYH0Vv2" class="button action-button" target="_blank">Apply</a> {{#link-to
-          'contributor-day' 'rxjs' class="button"}}+ info{{/link-to}}
-        </footer>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="day-card">
-        <em class="angular-day-logo day-logo"></em>
-        <h3>Angular Contributor Days</h3>
-        <p>
-          04/08/2017 <br> Salt Lake City
-        </p>
-        <footer>
-          <a href="https://goo.gl/forms/7A8UgHlLCk8eomSx2" class="button action-button" target="_blank">Apply</a> {{#link-to
-          'contributor-day' 'angular' class="button"}}+ info{{/link-to}}
-        </footer>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="day-card">
-        <em class="react-day-logo day-logo"></em>
-        <h3 class="">React Contributor Days</h3>
-        <p>
-          Coming <br> Soon
-        </p>
-        <footer>
-          <a href="https://goo.gl/forms/3YbuBqtVmqH7sLiB3" class="button action-button" target="_blank">Apply</a>
-          <em>More info coming soon.</em>
-        </footer>
-      </div>
-    </div>
+    {{#each model.events as |event|}}
+      {{event-card event=event class="col-md-4"}}
+    {{/each}}
   </div>
 </section>

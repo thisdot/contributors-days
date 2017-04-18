@@ -1,22 +1,26 @@
 <div class="terminal {{if sticky 'sticky'}}">
-  <p>
-    <strong>Hi! Welcome to Contributor Days introduction.</strong><
-  </p>
-  {{#each pastCommands as |command|}}
-    <p class="terminal-command">
-      {{command.text}}
+  {{#if fastboot.isFastBoot}}
+    <p>Contributor Days strives to create stronger relationships and focus in the existing community while providing an opportunity for other developers who may not have contributed to the specific project a chance to explore new opportunities.</p>
+  {{else}}
+    <p>
+      <strong>Hi! Welcome to Contributor Days introduction.</strong><
     </p>
-    {{component command.component options=command.options class="terminal-result"}}
-  {{/each}}
+    {{#each pastCommands as |command|}}
+      <p class="terminal-command">
+        {{command.text}}
+      </p>
+      {{component command.component options=command.options class="terminal-result"}}
+    {{/each}}
 
-  <div class="terminal-prompt">
-    {{one-way-input promptText
-        class="command-input"
-        update=(action (mut promptText))
-        autocomplete="off"
-        keyEvents=(hash
-          13=(action "inputCommand" promptText)
-        )
-    }}
-  </div>
+    <div class="terminal-prompt">
+      {{one-way-input promptText
+          class="command-input"
+          update=(action (mut promptText))
+          autocomplete="off"
+          keyEvents=(hash
+            13=(action "inputCommand" promptText)
+          )
+      }}
+    </div>
+  {{/if}}
 </div>

@@ -6,19 +6,15 @@
     padding-bottom: unit-space(1);
     border-bottom: 2px solid $action-color;
     a {
-      @include makeLogo('images/cd-logo.svg', 260px, 150px);
+      @include makeLogo('images/cd-logo.svg', 395px, 100px);
       max-width: 100%;
     }
   }
 
   .titles {
-    br {
-      display: none;
-    }
-    @include desktop() {
-      br {
-        display: block;
-      }
+    p {
+      text-transform: uppercase;
+      color: $main-color;
     }
   }
 
