@@ -1,0 +1,52 @@
+.day-card {
+  border-bottom: 2px solid $dark-alt-color;
+  box-sizing: border-box;
+  color: $main-color;
+
+  header {
+    border-bottom: 2px solid $dark-alt-color;
+    padding: unit-space(1);
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .day-logo {
+    @each $framework in $frameworks {
+      &.#{$framework} {
+        @include makeLogo('images/#{$framework}-day-logo.svg', 118px, 82px);
+      }
+    }
+  }
+
+  h3 {
+    font-size: 23px;
+    font-weight: normal;
+    strong {
+      font-weight: bold;
+      display: block;
+    }
+  }
+
+  p {
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    padding: unit-space(1);
+  }
+
+  footer {
+    padding: unit-space(1);
+    border-top: 1px solid $dark-alt-color;
+
+    .button.action-button {
+      margin-right: unit-space(1);
+      vertical-align: bottom;
+    }
+    em {
+      display: inline-block;
+      font-style: normal;
+      max-width: 140px;
+      text-align: left;
+    }
+  }
+}

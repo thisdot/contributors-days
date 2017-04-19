@@ -6,6 +6,7 @@
 @import 'modules/index';
 @import 'modules/person-card';
 @import 'modules/contributor-day';
+@import 'modules/event-card';
 
 body {
   @include body-copy();

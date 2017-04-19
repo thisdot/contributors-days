@@ -11,54 +11,7 @@
 // }
 
 .upcoming-days {
-  .day-card {
-    background: $alt-color;
-    border-radius: 4px;
-    position: relative;
-    text-align: center;
-    margin-top: 100px;
-    box-sizing: border-box;
-    color: $main-color;
-
-    .day-logo {
-      box-sizing: border-box;
-      background-color: #fff;
-      border: 10px solid $alt-color;
-      position: absolute;
-      top: -80px;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: 120px;
-
-      @each $framework in $frameworks {
-        &.#{$framework} {
-          @include makeLogo('images/#{$framework}-day-logo.svg', 160px, 160px);
-          background-size: 118px 82px;
-        }
-      }
-    }
-    h3 {
-      padding: 90px 0 0 0;
-      font-size: 23px;
-      font-weight: bold;
-    }
-    p {
-      font-size: 24px;
-    }
-    footer {
-      padding: unit-space(1) 0;
-      .button.action-button {
-        margin-right: unit-space(1);
-        vertical-align: bottom;
-      }
-      em {
-        display: inline-block;
-        font-style: normal;
-        max-width: 140px;
-        text-align: left;
-      }
-    }
-  }
+  
 }
 
 .contact-row {
