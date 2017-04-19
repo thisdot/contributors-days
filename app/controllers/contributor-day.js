@@ -4,17 +4,25 @@ const { computed, get } = Ember;
 export default Ember.Controller.extend({
   attendees: computed('model.event.slug', 'model.people', function() {
     let people = this.get('model.people');
-    let eventKey = `cd-${this.get('model.event.slug')}`;
+    let slug = this.get('model.event.slug');
+    let eventKey = `cd-${slug}`;
+
     return people.filter((person) => {
-      return get(person, 'featured').includes(eventKey);
+      let featured = get(person, 'featured');
+
+      return featured.includes(eventKey);
     }).sortBy('order');
   }),
 
   leads: computed('model.event.slug', 'model.people', function() {
     let people = this.get('model.people');
-    let eventKey = `lead-${this.get('model.event.slug')}`;
+    let slug = this.get('model.event.slug');
+    let eventKey = `lead-${slug}`;
+
     return people.filter((person) => {
-      return get(person, 'featured').includes(eventKey);
+      let featured = get(person, 'featured');
+
+      return featured.includes(eventKey);
     }).sortBy('order');
   })
 });
