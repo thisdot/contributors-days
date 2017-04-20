@@ -1,0 +1,17 @@
+{{#if title}}
+  <h2>{{title}}</h2>
+{{/if}}
+<div class="row">
+  <nav class="col-lg-3">
+    {{#each videos as |video|}}
+      <button class="list-item {{if (eq selected video) "active"}}" {{action (action (mut selected) video)}}>
+        {{video.title}}
+      </button>
+    {{/each}}
+  </nav>
+  <div class="col-lg-9">
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/{{selected.id}}?list={{playlist}}" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

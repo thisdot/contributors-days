@@ -37,4 +37,9 @@ test('visiting /contributor-days/rxjs', function(assert) {
     "Rob Wormald"
   ].forEach(name => showsPerson(name, '.attendees-list'));
 
+
+  andThen(function() {
+    assert.ok($('.videos-list').length, 'Videos playlist is visible');
+    assert.equal($('.videos-list .list-item').length, 10, '10 videos are show');
+  });
 });

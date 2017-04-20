@@ -49,50 +49,15 @@
   </div>
 </section>
 
-<section class="container framework-videos-list">
-  <h2>
-    Talks and discussions
-  </h2>
-  <div class="row">
-    <nav class="col-lg-3">
-      <a href="#">
-        RxJS 5+ and Beyond Talk by Ben Lesh
-      </a>
-      <a href="#">
-        RxJS 5 Operator Architecture Talk by Paul Taylor
-      </a>
-      <a href="#" class="active">
-        1 Operator Philosophy and Versioning
-      </a>
-      <a href="#">
-        2 Size &amp; Modularity vs Ergonomics vs Performance
-      </a>
-      <a href="#">
-         3 Breaking Changes &amp; Communication
-      </a>
-      <a href="#">
-        4 Zone.js Integration
-      </a>
-      <a href="#">
-        5 Helping newbies understand value of Rx
-      </a>
-      <a href="#">
-        6 Debugger
-      </a>
-      <a href="#">
-        7 Standardization
-      </a>
-      <a href="#">
-        8 Reducing Beginner Pain
-      </a>
-    </nav>
-    <div class="col-lg-9">
-      <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1JKpmJf_BGU?list=PL-G5r6j4GptEDVrYv140S9PRJZfeFmZoM" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-</section>
+{{#if model.videos}}
+  {{videos-list 
+    title="Talks and discussions"
+    tagName="section"
+    class="framework-videos-list container" 
+    videos=model.videos
+    playlist=model.playlist
+  }}
+{{/if}}
 
 <section class="container framework-people">
   <h2>

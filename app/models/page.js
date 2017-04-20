@@ -6,5 +6,8 @@ export default Page.extend({
   apply: attr(),
   framework: attr(),
   attendees: attr('array'),
-  leads: attr('array')
+  leads: attr('array'),
+  videos: attr('array'),
+  video: attr(),
+  playlist: attr()
 });
