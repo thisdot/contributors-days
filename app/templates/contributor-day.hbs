@@ -20,11 +20,19 @@
 
 <section class="container framework-info">
   <header class="framework-header">
-    <em class="{{model.event.framework}} day-logo"></em>
-    <h2 class="title">
-      <strong>{{model.event.framework}}</strong>
-      Contributor Days
-    </h2>
+    <div class="col-md-6 logo-wrap">
+      <em class="{{model.event.framework}} day-logo col-md-4"></em>
+      <h2 class="title col-md-8">
+        <strong>{{model.event.framework}}</strong>
+        Contributor Days
+      </h2>
+    </div>
+    <div class="col-md-3 framework-meta">
+      {{moment-format model.event.date 'MMM Do, YYYY'}}
+    </div>
+    <div class="col-md-3 framework-meta">
+      {{model.event.location}}
+    </div>
   </header>
 
   <div class="row framework-intro">
@@ -98,72 +106,15 @@
   </div>
 </section>
 
-<section class="container framework-people">
-  <h2>
-    Attendees
-  </h2>
-  <div class="row attendees-list">
-    {{#each attendees as |attendee|}}
-      {{person-card person=attendee class="col-md-3"}}
-    {{/each}}
-  </div>
-</section>
-
-<div class="container about-day">
-  <div class="row">
-    <div class="col-md-3 framework-logo">
-
+{{#if attendees}}
+  <section class="container framework-people">
+    <h2>
+      Attendees
+    </h2>
+    <div class="row attendees-list">
+      {{#each attendees as |attendee|}}
+        {{person-card person=attendee class="col-md-3"}}
+      {{/each}}
     </div>
-    <div class="col-md-9">
-      <h1>{{model.event.title}}</h1>
-      <p>
-        Contributor Days strives to create stronger relationships and focus in the existing community while providing an opportunity for other developers who may not have contributed to the specific project a chance to explore new opportunities.
-      </p>
-    </div>
-
-    <h2 class="col-md-4">When</h2>
-    <p class="col-md-6">
-      {{moment-format model.event.date 'MM/DD/YYYY'}}
-    </p>
-
-    <h2 class="col-md-4">Where</h2>
-    <p class="col-md-6">
-      {{model.event.location}}
-    </p>
-
-    <h2 class="col-md-4">Leads</h2>
-    <div class="col-md-6">
-      <div class="row leads-list">
-        {{#each leads as |lead|}}
-          {{person-card person=lead class="col-md-4"}}
-        {{/each}}
-      </div>
-    </div>
-
-    <h2 class="col-md-4">Agenda</h2>
-    <p class="col-md-6">
-      <ol>
-        <li>Vision of open source framework / library from authors</li>
-        <li>Roundtable conversations about the direction of the framework / library</li>
-        <li>Collaborative mini-hack sessions to jumpstart major features or fix major concerns in key projects</li>
-        <li>Food, fun, bonding</li>
-      </ol>
-    </p>
-
-    <h2 class="col-md-4">Ready?</h2>
-    <p class="col-md-6">
-      <a href="{{model.event.apply}}" class="button action-button" target="_blank">Apply</a>
-    </p>
-
-    {{#if attendees}}
-      <h2 class="col-md-4">Attendees</h2>
-      <div class="col-md-6">
-        <div class="row attendees-list">
-          {{#each attendees as |attendee|}}
-            {{person-card person=attendee class="col-md-4"}}
-          {{/each}}
-        </div>
-      </div>
-    {{/if}}
-  </div>
-</div>
+  </section>
+{{/if}}

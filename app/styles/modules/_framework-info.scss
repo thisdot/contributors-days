@@ -1,8 +1,28 @@
 .framework-header {
   border-bottom: 2px solid $dark-alt-color;
-  padding: unit-space(1);
+  padding: unit-space(1) 0;
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
+
+  .framework-meta {
+    font-size: 16px;
+    color: $main-color;
+    border-left: 1px solid $dark-alt-color;
+    text-align: center;
+    padding-top: unit-space(1);
+    padding-bottom: unit-space(1);
+  }
+
+  .logo-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 0;
+    .day-logo {
+      margin-left: 0;
+    }
+  }
+
   .day-logo {
     @each $framework in $frameworks {
       &.#{$framework} {
@@ -27,9 +47,6 @@
     .title {
       line-height: 30px;
       padding-top: 10px;
-      @include tablet() {
-        margin-left: 20px;
-      }
     }
   }
 }
@@ -51,6 +68,9 @@
 
 .framework-intro {
   padding: unit-space(2) 0;
+  p {
+    font-size: 18px;
+  }
 }
 
 .framework-videos-list {
