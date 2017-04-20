@@ -1,17 +1,16 @@
 import Ember from 'ember';
-const { RSVP } = Ember;
+
+let days = {
+  rxjs: 'contributor-day-rxjs-2017',
+  angular: 'contributor-day-angular-2017-apr',
+  react: 'contributor-day-react-2017'
+};
 
 export default Ember.Route.extend({
   model({ framework }) {
-    let people = this.store.findAll('author');
-    let event = this.store.findAll('post')
-      .then((events) => {
-        return events.findBy('slug', framework);
-      });
-
-    return RSVP.hash({
-      people,
-      event
-    });
+    if (days[framework]) {
+      framework = days[framework];
+    }
+    return this.store.findRecord('page', framework);
   }
 });

@@ -52,7 +52,7 @@
     "ember-moment": "7.3.0",
     "ember-one-way-controls": "1.1.2",
     "ember-resolver": "^2.0.3",
-    "ember-writer": "this-dot/ember-writer#7e91f618da3344b1f20256c05e6f0818887dd48a",
+    "ember-writer": "this-dot/ember-writer#61bf2d99f7902213b09b674868bdbe1f0e3501d5",
     "loader.js": "^4.0.10"
   },
   "dependencies": {}
