@@ -8,8 +8,7 @@ const Router = Ember.Router.extend(Trackable, {
 });
 
 Router.map(function() {
-  this.route('old-redirect', { path: 'contributor-day/:framework'});
-  this.route('contributor-day', { path: ':framework' });
+  this.route('contributor-day', { path: '/contributor-days/:framework' });
   this.route('about');
 });
 

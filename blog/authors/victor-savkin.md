@@ -3,7 +3,5 @@ name: Victor Savkin
 title: Angular Core Contributor
 twitter: victorsavkin
 github: https://github.com/vsavkin
-image: /media/people/victor-savkin.jpeg
-featured: cd-angular
-order: 90
+image: /media/people/victor-savkin.jpg
 ---

@@ -110,7 +110,7 @@
 
     <h2 class="col-md-4">Leads</h2>
     <div class="col-md-6">
-      <div class="row">
+      <div class="row leads-list">
         {{#each leads as |lead|}}
           {{person-card person=lead class="col-md-4"}}
         {{/each}}
@@ -135,7 +135,7 @@
     {{#if attendees}}
       <h2 class="col-md-4">Attendees</h2>
       <div class="col-md-6">
-        <div class="row">
+        <div class="row attendees-list">
           {{#each attendees as |attendee|}}
             {{person-card person=attendee class="col-md-4"}}
           {{/each}}
@@ -144,3 +144,4 @@
     {{/if}}
   </div>
 </div>
+
