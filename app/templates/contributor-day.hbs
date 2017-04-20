@@ -86,6 +86,29 @@
   </div>
 </section>
 
+
+<section class="container framework-people">
+  <h2>
+    Leads
+  </h2>
+  <div class="row leads-list">
+    {{#each leads as |lead|}}
+      {{person-card person=lead class="col-md-3"}}
+    {{/each}}
+  </div>
+</section>
+
+<section class="container framework-people">
+  <h2>
+    Attendees
+  </h2>
+  <div class="row attendees-list">
+    {{#each attendees as |attendee|}}
+      {{person-card person=attendee class="col-md-3"}}
+    {{/each}}
+  </div>
+</section>
+
 <div class="container about-day">
   <div class="row">
     <div class="col-md-3 framework-logo">
@@ -144,4 +167,3 @@
     {{/if}}
   </div>
 </div>
-

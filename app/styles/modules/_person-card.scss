@@ -1,11 +1,12 @@
 .person-card {
-  text-align: center;
+  text-align: left;
   margin-top: unit-space(2);
+  font-size: 16px;
   .person-pic {
-    border-radius: 250px;
-    max-width: 250px;
+    border-radius: 0px unit-space(1);
+    max-width: 150px;
     overflow: hidden;
-    margin-bottom: unit-space(1);
+    margin: 0 0 unit-space(0.5) 0;
   }
   img {
     width: 100%;
@@ -13,6 +14,7 @@
   }
   strong {
     display: block;
+    font-size: 18px;
   }
   a {
     color: darken($alt-color, 50);
