@@ -1,0 +1,82 @@
+.framework-header {
+  border-bottom: 2px solid $dark-alt-color;
+  padding: unit-space(1);
+  display: flex;
+  flex-flow: row wrap;
+  .day-logo {
+    @each $framework in $frameworks {
+      &.#{$framework} {
+        @include makeLogo('images/#{$framework}-day-logo.svg', 118px, 82px);
+      }
+    }
+  }
+  .title {
+    font-size: 23px;
+    font-weight: normal;
+    color: $main-color;
+    text-transform: uppercase;
+    strong {
+      font-weight: bold;
+      display: block;
+    }
+  }
+}
+
+.framework-info {
+  .framework-header {
+    .title {
+      line-height: 30px;
+      padding-top: 10px;
+      @include tablet() {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.video-wrapper {
+  position: relative;
+	padding-bottom: 52.8%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+
+  iframe {
+    position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  }
+}
+
+.framework-intro {
+  padding: unit-space(2) 0;
+}
+
+.framework-videos-list {
+  padding: unit-space(1) 0;
+
+  h2 {
+    margin-bottom: unit-space(2);
+  }
+
+  nav {
+    a {
+      font-size: 16px;
+      padding: 5px 0;
+      display: inline-block;
+      color: $main-color;
+      font-weight: bold;
+      border-top: 1px solid $dark-alt-color;
+      &.active {
+        color: $action-color !important;
+      }
+      &:first-child {
+        border-top: none;
+      }
+      &:nth-child(odd) {
+        color: lighten($main-color, 15);
+      }
+    }
+  }
+}

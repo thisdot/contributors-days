@@ -1,13 +1,13 @@
 <div class="day-card">
   <header>
-    <em class="{{event.framework}} day-logo"></em>
-    <h3>
+    <em class="{{event.framework}} day-logo col-md"></em>
+    <h3 class="title col-md">
       <strong>{{event.framework}}</strong>
       Contributor Days
     </h3>
   </header>
   <p>
-    {{moment-format event.date 'MM/DD/YYYY'}}
+    {{moment-format event.date 'MMM Do, YYYY'}}
     <br>
     {{event.location}}
   </p>

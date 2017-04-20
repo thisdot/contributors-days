@@ -4,26 +4,9 @@
   color: $main-color;
 
   header {
-    border-bottom: 2px solid $dark-alt-color;
-    padding: unit-space(1);
-    display: flex;
-    flex-flow: row wrap;
-  }
-
-  .day-logo {
-    @each $framework in $frameworks {
-      &.#{$framework} {
-        @include makeLogo('images/#{$framework}-day-logo.svg', 118px, 82px);
-      }
-    }
-  }
-
-  h3 {
-    font-size: 23px;
-    font-weight: normal;
-    strong {
-      font-weight: bold;
-      display: block;
+    @extend .framework-header;
+    h3.title {
+      font-size: 20px;
     }
   }
 
@@ -37,6 +20,7 @@
   footer {
     padding: unit-space(1);
     border-top: 1px solid $dark-alt-color;
+    text-align: center;
 
     .button.action-button {
       margin-right: unit-space(1);

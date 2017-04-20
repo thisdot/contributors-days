@@ -7,6 +7,7 @@
 @import 'modules/person-card';
 @import 'modules/contributor-day';
 @import 'modules/event-card';
+@import 'modules/framework-info';
 
 body {
   @include body-copy();

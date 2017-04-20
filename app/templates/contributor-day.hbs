@@ -17,15 +17,81 @@
 </header>
 
 {{outlet}}
-<div class="container about-day">
-  <header>
-    {{#link-to 'index' class="button go-back"}}&laquo; Home{{/link-to}}
+
+<section class="container framework-info">
+  <header class="framework-header">
+    <em class="{{model.event.framework}} day-logo"></em>
+    <h2 class="title">
+      <strong>{{model.event.framework}}</strong>
+      Contributor Days
+    </h2>
   </header>
-  <div class="row">
-    <div class="col-md-4 framework-logo">
-      <img src="/assets/images/{{concat model.event.slug '-day-logo'}}.svg" alt="" />
+
+  <div class="row framework-intro">
+    <div class="col-lg-3">
+      <p>
+        Contributor Days strives to create stronger relationships and focus in the existing community while providing an opportunity for other developers who may not have contributed to the specific project a chance to explore new opportunities.
+      </p>
     </div>
-    <div class="col-md-6">
+    <div class="col-lg-9">
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VBXMso56Ovw" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container framework-videos-list">
+  <h2>
+    Talks and discussions
+  </h2>
+  <div class="row">
+    <nav class="col-lg-3">
+      <a href="#">
+        RxJS 5+ and Beyond Talk by Ben Lesh
+      </a>
+      <a href="#">
+        RxJS 5 Operator Architecture Talk by Paul Taylor
+      </a>
+      <a href="#" class="active">
+        1 Operator Philosophy and Versioning
+      </a>
+      <a href="#">
+        2 Size &amp; Modularity vs Ergonomics vs Performance
+      </a>
+      <a href="#">
+         3 Breaking Changes &amp; Communication
+      </a>
+      <a href="#">
+        4 Zone.js Integration
+      </a>
+      <a href="#">
+        5 Helping newbies understand value of Rx
+      </a>
+      <a href="#">
+        6 Debugger
+      </a>
+      <a href="#">
+        7 Standardization
+      </a>
+      <a href="#">
+        8 Reducing Beginner Pain
+      </a>
+    </nav>
+    <div class="col-lg-9">
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1JKpmJf_BGU?list=PL-G5r6j4GptEDVrYv140S9PRJZfeFmZoM" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container about-day">
+  <div class="row">
+    <div class="col-md-3 framework-logo">
+
+    </div>
+    <div class="col-md-9">
       <h1>{{model.event.title}}</h1>
       <p>
         Contributor Days strives to create stronger relationships and focus in the existing community while providing an opportunity for other developers who may not have contributed to the specific project a chance to explore new opportunities.
