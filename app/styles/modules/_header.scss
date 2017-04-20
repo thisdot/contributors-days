@@ -3,8 +3,17 @@
   padding: unit-space(2) 0;
 
   h1 {
-    padding-bottom: unit-space(1);
-    border-bottom: 2px solid $action-color;
+    a {
+      @include makeLogo('images/cd-logo.svg', 266px, 65px);
+      max-width: 100%;
+    }
+  }
+
+  &.show-terminal {
+    h1 {
+      padding-bottom: unit-space(1);
+      border-bottom: 2px solid $action-color;
+    }
     a {
       @include makeLogo('images/cd-logo.svg', 395px, 100px);
       max-width: 100%;
@@ -18,8 +27,40 @@
     }
   }
 
+  nav {
+    a {
+      color: $main-color;
+      font-size: 18px;
+      display: inline-block;
+      margin-left: unit-space(0.5);
+      padding: unit-space(0.5) 0;
+      border-bottom: 1px solid $dark-alt-color;
+      &.active {
+        border-color: $action-color;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @include mobileOnly() {
+    h2 {
+      margin-top: unit-space(1);
+    }
+    nav {
+      a {
+        display: block;
+        margin: 0;
+      }
+    }
+  }
+
   @include desktop() {
-    padding: unit-space(4);
+    &.show-terminal {
+      padding: unit-space(4);
+    }
+
     .row {
       align-items: center;
     }

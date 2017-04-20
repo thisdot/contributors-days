@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="titles col-md-4">
+      <h1>
+        {{#link-to 'index'}}Contributor Days{{/link-to}}
+      </h1>
+      {{#if showTerminal}}
+        <p>
+          Make open source, not war.
+        </p>
+      {{/if}}
+    </div>
+    {{#if showTerminal}}
+      <div class="col-md-7 push-lg-1">
+        {{terminal-prompt commands=commands}}
+      </div>
+    {{else}}
+      <div class="col-md-7">
+        <div class="row">
+          <div class="frameworks col-md-8">
+            <h2>
+              Frameworks
+            </h2>
+            <nav>
+              {{#link-to 'contributor-day' 'rxjs'}} RxJs {{/link-to}}
+              {{#link-to 'contributor-day' 'angular'}} Angular {{/link-to}}
+              {{#link-to 'contributor-day' 'react'}} React {{/link-to}}
+              {{#link-to 'contributor-day' 'webpack'}} Webpack {{/link-to}}
+            </nav>
+          </div>
+          <div class="col-md-4">
+            <h2>About</h2>
+            <nav>
+              {{#link-to 'about'}} FAQ {{/link-to}}
+              <a href="#">Sponsors</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    {{/if}}
+  </div>
+</div>

@@ -1,6 +1,6 @@
 .framework-header {
   border-bottom: 2px solid $dark-alt-color;
-  padding: unit-space(1) 0;
+  padding: unit-space(2) 0;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -70,34 +70,6 @@
   padding: unit-space(2) 0;
   p {
     font-size: 18px;
-  }
-}
-
-.framework-videos-list {
-  padding: unit-space(1) 0;
-
-  h2 {
-    margin-bottom: unit-space(2);
-  }
-
-  nav {
-    .list-item {
-      font-size: 16px;
-      padding: 5px 0;
-      display: inline-block;
-      color: $main-color;
-      font-weight: bold;
-      border-top: 1px solid $dark-alt-color;
-      &.active {
-        color: $action-color !important;
-      }
-      &:first-child {
-        border-top: none;
-      }
-      &:nth-child(odd) {
-        color: lighten($main-color, 15);
-      }
-    }
   }
 }
 
