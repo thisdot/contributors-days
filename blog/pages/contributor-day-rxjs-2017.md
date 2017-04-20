@@ -31,26 +31,26 @@ attendees:
 playlist: PL-G5r6j4GptEDVrYv140S9PRJZfeFmZoM
 video: 
     -   title: Summary
-        id: KbMLN7oYO7E
+        url: https://www.youtube.com/watch?v=KbMLN7oYO7E
 videos:
     -   title: RxJS 5+ and Beyond Talk by Ben Lesh
-        id: KbMLN7oYO7E
+        url: https://www.youtube.com/watch?v=KbMLN7oYO7E
     -   title: RxJS 5 Operator Architecture Talk by Paul Taylor
-        id: FwsITFVks38
+        url: https://www.youtube.com/watch?v=FwsITFVks38
     -   title: Operator Philosophy and Versioning
-        id: 1JKpmJf_BGU
+        url: https://www.youtube.com/watch?v=1JKpmJf_BGU
     -   title: Size & Modularity vs Ergonomics vs Performance
-        id: 2elgbSierX0
+        url: https://www.youtube.com/watch?v=2elgbSierX0
     -   title: Breaking Changes & Communication
-        id: srPQ3xnDt4M
+        url: https://www.youtube.com/watch?v=srPQ3xnDt4M
     -   title: Zone.js Integration
-        id: nfmS9LtqXnI
+        url: https://www.youtube.com/watch?v=nfmS9LtqXnI
     -   title: Helping newbies understand value of Rx
-        id: 22o4-kXt3es
+        url: https://www.youtube.com/watch?v=22o4-kXt3es
     -   title: Debugger
-        id: KEpfpheklSM
+        url: https://www.youtube.com/watch?v=KEpfpheklSM
     -   title: Standardization
-        id: qXs2YJKCEsA
+        url: https://www.youtube.com/watch?v=qXs2YJKCEsA
     -   title: Reducing Beginner Pain
-        id: a66bjmP1tR4
+        url: https://www.youtube.com/watch?v=a66bjmP1tR4
 ---

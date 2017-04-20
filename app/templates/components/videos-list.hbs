@@ -10,8 +10,6 @@
     {{/each}}
   </nav>
   <div class="col-lg-9">
-    <div class="video-wrapper">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/{{selected.id}}?list={{playlist}}" frameborder="0" allowfullscreen></iframe>
-    </div>
+    {{lazy-video class="video-wrapper" url=selected.url width="560" height="315"}}
   </div>
 </div>
