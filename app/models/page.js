@@ -9,5 +9,6 @@ export default Page.extend({
   leads: attr('array'),
   videos: attr('array'),
   video: attr(),
-  playlist: attr()
+  playlist: attr(),
+  date: attr('date')
 });

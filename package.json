@@ -48,6 +48,7 @@
     "ember-data": "^2.9.0",
     "ember-engines": "0.3.4",
     "ember-export-application-global": "^1.0.5",
+    "ember-i18n": "5.0.1",
     "ember-lazy-video": "taras/ember-lazy-video#c798ad70e6ac2c845736070664a2ac722bddf2ea",
     "ember-load-initializers": "^0.5.1",
     "ember-moment": "7.3.0",

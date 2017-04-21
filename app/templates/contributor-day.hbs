@@ -4,7 +4,7 @@
       <em class="{{model.framework}} day-logo col-md-4"></em>
       <h2 class="title col-md-8">
         <strong>{{model.framework}}</strong>
-        Contributor Day
+        {{t "Contributor Day"}}
       </h2>
     </div>
     <div class="col-md-3 framework-meta">
@@ -15,18 +15,20 @@
     </div>
   </header>
 
-  <div class="row framework-intro">
-    <div class="col-lg-3">
-      <p>
-        Contributor Days strives to create stronger relationships and focus in the existing community while providing an opportunity for other developers who may not have contributed to the specific project a chance to explore new opportunities.
-      </p>
-    </div>
-    <div class="col-lg-9">
-      <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VBXMso56Ovw" frameborder="0" allowfullscreen></iframe>
+  {{#if model.video}}
+    <div class="row framework-intro">
+      <div class="col-lg-3">
+        {{#if model.body}}
+          {{{model.body}}}
+        {{else}}
+          <p>{{t "contributor-day.purpose"}}</p>
+        {{/if}}
+      </div>
+      <div class="col-lg-9">
+        {{lazy-video class="video-wrapper" url=model.video.url width="560" height="315"}}
       </div>
     </div>
-  </div>
+  {{/if}}
 </section>
 
 {{#if model.videos}}

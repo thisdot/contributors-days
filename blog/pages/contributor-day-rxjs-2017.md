@@ -30,8 +30,8 @@ attendees:
     - rob-wormald
 playlist: PL-G5r6j4GptEDVrYv140S9PRJZfeFmZoM
 video: 
-    -   title: Summary
-        url: https://www.youtube.com/watch?v=KbMLN7oYO7E
+    title: Summary
+    url: https://www.youtube.com/watch?v=VBXMso56Ovw
 videos:
     -   title: RxJS 5+ and Beyond Talk by Ben Lesh
         url: https://www.youtube.com/watch?v=KbMLN7oYO7E
@@ -54,3 +54,8 @@ videos:
     -   title: Reducing Beginner Pain
         url: https://www.youtube.com/watch?v=a66bjmP1tR4
 ---
+RxJS Contributor Day brought together the creators of RxJS and users of the library to discuss concerns and plan improvements.
+
+Amongst the users, we had Angular core team members, the author of Vue.js, developers from Slack, Microsoft, and Netflix. 
+
+The discussion focused on making it easier for users of all levels to consume the library, understand the API and learn how to use RxJS library effectively.
