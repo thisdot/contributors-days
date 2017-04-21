@@ -44,7 +44,7 @@ test('visiting /contributor-days/rxjs', function(assert) {
   });
 });
 
-test('header navigation is shown without the terminal', function(asser) {
+test('header navigation is shown without the terminal', function(assert) {
   visit('/contributor-days/rxjs');
   andThen(function() {
     assert.ok($('.app-header:not(show-terminal)').length, 'App header is rendered without show-terminal class');
