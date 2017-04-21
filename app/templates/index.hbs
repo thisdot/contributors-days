@@ -1,8 +1,16 @@
 <section class="container content-section">
   <h2>Upcoming contributor days</h2>
   <div class="row upcoming-days">
-    {{#each model.events as |event|}}
-      {{event-card event=event class="col-md-4"}}
+    {{#each (sort-by 'date:desc' model) as |post|}}
+      <div class="article">
+        <h3>{{post.title}}</h3>
+        {{log (t 'human-date-format')}}
+        <div class="date">{{moment-format post.date (get (t 'human-date-format') "string")}}</div>
+        <div class="content">{{{post.body}}}</div>
+        {{#if post.link}}
+          <a href="{{post.link}}">{{if post.linkText post.linkText (t 'Read More')}}</a>
+        {{/if}}
+      </div>
     {{/each}}
   </div>
 </section>

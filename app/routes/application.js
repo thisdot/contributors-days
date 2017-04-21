@@ -16,11 +16,8 @@ export default Ember.Route.extend({
       'cat': 'commands/cat-command',
     };
 
-    let events = this.store.findAll('post');
-
     return hash({
-      commands,
-      events
+      commands
     });
   }
 });

@@ -8,7 +8,7 @@
       </h2>
     </div>
     <div class="col-md-3 framework-meta">
-      {{moment-format model.date 'MMM Do, YYYY'}}
+      {{moment-format model.date (get (t 'human-date-format') "string")}}
     </div>
     <div class="col-md-3 framework-meta">
       {{model.location}}
