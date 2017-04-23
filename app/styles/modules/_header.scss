@@ -31,10 +31,10 @@
     a {
       color: $main-color;
       font-size: 18px;
-      display: inline-block;
-      margin-left: unit-space(0.5);
+      display: block;
       padding: unit-space(0.5) 0;
       border-bottom: 1px solid $dark-alt-color;
+      transition: all 100ms ease-in;
       &.active {
         border-color: $action-color;
       }
@@ -44,14 +44,31 @@
     }
   }
 
+  @include tablet() {
+    nav {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      a {
+        margin-right: unit-space(1);
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
   @include mobileOnly() {
     h2 {
-      margin-top: unit-space(1);
+      margin: unit-space(1) 0 unit-space(0.5) 0;
     }
     nav {
       a {
-        display: block;
-        margin: 0;
+        &.active {
+          padding-left: unit-space(0.5);
+          border-bottom-color: $dark-alt-color;
+          border-left: 4px solid $main-color;
+        }
       }
     }
   }
