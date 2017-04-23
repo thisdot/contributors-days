@@ -34,3 +34,8 @@ attendees:
     - igor-kamenetsky
     - bill-odom
 ---
+Angular Contributor Day brought together developers from the Angular Core Team and a group of Angular community members.
+
+The group discussed 15 subjects that were of concern to the community. The videos from the event will be available shortly.
+
+Sign up to the mailing list to be notified when videos become available.
