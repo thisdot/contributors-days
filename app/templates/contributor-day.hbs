@@ -31,6 +31,49 @@
   {{/if}}
 </section>
 
+<section class="container framework-sign-up">
+  <div class="row">
+    <div class="col-md-8">
+      <h2>Sign up</h2>
+      <p>
+        Sign up to {{model.title}} to be notified of upcoming events, updates and videos.
+      </p>
+      <form class="" action="index.html" method="post" class="row">
+        <div class="col-lg-3 col-md-6">
+          <label>Name</label>
+          <input type="text" name="" value="" class="input-text">
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <label>Email</label>
+          <input type="text" name="" value="" class="input-text">
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <label>Company</label>
+          <input type="text" name="" value="" class="input-text">
+        </div>
+        <div class="col-lg-3 col-md-6 signup-button">
+          <label>.</label>
+          <button type="submit" class="button">
+            Sign up
+          </button>
+        </div>
+      </form>
+    </div>
+    {{#if (and model.apply isFuture)}}
+      <div class="col-md-4">
+        <h2>Apply</h2>
+        <p>Aplications are open for {{model.title}} contributor days. Apply now!</p>
+        <p>
+          <a href="{{model.apply}}" target="_blank" class="button action-button">
+            Apply
+          </a>
+        </p>
+      </div>
+    {{/if}}
+  </div>
+
+</section>
+
 {{#if model.videos}}
   {{videos-list
     title="Talks and discussions"

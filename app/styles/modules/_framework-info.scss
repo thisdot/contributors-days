@@ -76,3 +76,41 @@
 .framework-people {
   margin-top: unit-space(2);
 }
+
+.framework-sign-up {
+  padding-top: unit-space(1);
+  padding-bottom: unit-space(1);
+  border-bottom: 2px solid $dark-alt-color;
+
+  h2 {
+    color: darken($dark-alt-color, 20);
+  }
+
+  label {
+    color: $main-color;
+    font-weight: bold;
+    margin: unit-space(0.5) 0;
+    display: block;
+  }
+  form {
+    margin-top: unit-space(1);
+  }
+  .input-text {
+    display: block;
+    width: 100%;
+  }
+  .signup-button {
+    label {
+      color: #fff;
+    }
+    .button {
+      background: $main-color;
+      color: #fff;
+    }
+  }
+  .action-button {
+    background: $action-color;
+    color: #fff;
+    border-color: $action-color;
+  }
+}

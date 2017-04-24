@@ -26,8 +26,8 @@
   display: inline-block;
   box-sizing: border-box;
   padding: 5px 15px;
-  border-radius: 50px;
-  border: 2px solid $main-color;
+  border-radius: 5px;
+  border: 1px solid $main-color;
   @include body-copy();
   font-size: 16px;
 }
