@@ -1,8 +1,10 @@
 .day-card {
   box-sizing: border-box;
   color: $main-color;
-  justify-content: center;
-  align-items: center;
+  @include desktop() {
+    justify-content: center;
+    align-items: center;
+  }
 
   header {
     @extend .framework-header;
@@ -15,6 +17,15 @@
       background-position: right center !important;
       margin-bottom: unit-space(1);
     }
+
+    @include mobileOnly() {
+      .day-logo {
+        margin: 0 auto;
+      }
+      h3.title {
+        text-align: center;
+      }
+    }
   }
 
   p {
@@ -22,6 +33,14 @@
     text-align: left;
     margin: 0;
     padding: unit-space(0.5);
+  }
+  @include mobileOnly() {
+    p {
+      text-align: center;
+    }
+    .row {
+      margin-bottom: 0;
+    }
   }
 
   footer {

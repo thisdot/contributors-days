@@ -84,16 +84,18 @@
   }}
 {{/if}}
 
-<section class="container framework-people">
-  <h2>
-    Leads
-  </h2>
-  <div class="row leads-list">
-    {{#each leads as |lead|}}
-      {{person-card person=lead class="col-md-3"}}
-    {{/each}}
-  </div>
-</section>
+{{#if leads}}
+  <section class="container framework-people">
+    <h2>
+      Leads
+    </h2>
+    <div class="row leads-list">
+      {{#each leads as |lead|}}
+        {{person-card person=lead class="col-md-3"}}
+      {{/each}}
+    </div>
+  </section>
+{{/if}}
 
 {{#if attendees}}
   <section class="container framework-people">
