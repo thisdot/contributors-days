@@ -75,13 +75,24 @@
 </section>
 
 {{#if model.videos}}
-  {{videos-list
+  {{!videos-list
     title="Talks and discussions"
     tagName="section"
     class="videos-list container"
     videos=model.videos
     playlist=model.playlist
   }}
+  <section class="container videos-list">
+    <h2>Talks and discussions</h2>
+    <div class="row">
+      {{#each model.videos as |video|}}
+        <div class="col-lg-4 col-md-6 video-card">
+          {{lazy-video class="video-wrapper" url=video.url width="560" height="315"}}
+          <h3>{{video.title}}</h3>
+        </div>
+      {{/each}}
+    </div>
+  </section>
 {{/if}}
 
 {{#if leads}}

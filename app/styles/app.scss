@@ -10,6 +10,8 @@
 @import 'modules/framework-info';
 @import 'modules/videos-list';
 @import 'modules/article-card';
+@import 'modules/video-card';
+
 
 body {
   @include body-copy();
