@@ -1,0 +1,9 @@
+<header>
+  <h3>{{post.title}}</h3>
+  <div class="date">{{moment-format post.date (get (t 'human-date-format') "string")}}</div>
+</header>
+<div class="content">{{{post.body}}}</div>
+
+{{#if post.link}}
+  <a href="{{post.link}}" class="read-more">{{if post.linkText post.linkText (t 'Read More')}}</a>
+{{/if}}

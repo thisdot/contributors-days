@@ -9,7 +9,7 @@ leads:
     - ben-lesh
     - paul-taylor
     - jay-phelps
-attendees: 
+attendees:
     - igor-minar
     - andre-staltz
     - uri-goldshtein
@@ -29,7 +29,7 @@ attendees:
     - hagai-cohen
     - rob-wormald
 playlist: PL-G5r6j4GptEDVrYv140S9PRJZfeFmZoM
-video: 
+video:
     title: Summary
     url: https://www.youtube.com/watch?v=VBXMso56Ovw
 videos:
@@ -53,9 +53,10 @@ videos:
         url: https://www.youtube.com/watch?v=qXs2YJKCEsA
     -   title: Reducing Beginner Pain
         url: https://www.youtube.com/watch?v=a66bjmP1tR4
+featured-image: /media/rxjs/rxjs-contributor-days-6.jpg
 ---
 RxJS Contributor Day brought together the creators of RxJS and users of the library to discuss concerns and plan improvements.
 
-Amongst the users, we had Angular core team members, the author of Vue.js, developers from Slack, Microsoft, and Netflix. 
+Amongst the users, we had Angular core team members, the author of Vue.js, developers from Slack, Microsoft, and Netflix.
 
 The discussion focused on making it easier for users of all levels to consume the library, understand the API and learn how to use RxJS library effectively.

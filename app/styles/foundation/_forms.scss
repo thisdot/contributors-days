@@ -3,7 +3,7 @@
   border: none;
   outline: none;
   @include body-copy();
-  border: 2px solid $main-color;
+  border: 1px solid $main-color;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
@@ -14,9 +14,9 @@
   border-radius: 4px;
   cursor: pointer;
   &.action-button {
-    background: $action-color;
+    background: #fff;
     border-color: $action-color;
-    color: #fff;
+    color: $action-color;
   }
 }
 

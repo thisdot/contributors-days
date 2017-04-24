@@ -11,7 +11,7 @@ leads:
     - stephen-fluin
     - alex-eagle
     - rob-wormald
-attendees: 
+attendees:
     - ben-lesh
     - uri-goldshtein
     - tara-manicsic
@@ -33,6 +33,7 @@ attendees:
     - justin-schwartzenberger
     - igor-kamenetsky
     - bill-odom
+featured-image: /media/rxjs/rxjs-contributor-days-24.jpg
 ---
 Angular Contributor Day brought together developers from the Angular Core Team and a group of Angular community members.
 

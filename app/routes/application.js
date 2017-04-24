@@ -1,5 +1,4 @@
 import Ember from 'ember';
-const { RSVP: { hash } } = Ember;
 
 export default Ember.Route.extend({
   model() {
@@ -16,11 +15,8 @@ export default Ember.Route.extend({
       'cat': 'commands/cat-command',
     };
 
-    let events = this.store.findAll('page');
-
-    return hash({
-      commands,
-      events
-    });
+    return {
+      commands
+    };
   }
 });

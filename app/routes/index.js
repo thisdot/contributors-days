@@ -1,18 +1,14 @@
 import Ember from 'ember';
-const { inject: { service } } = Ember;
+const { RSVP: { hash } } = Ember;
 
 export default Ember.Route.extend({
-  header: service(),
-
   model() {
-    return this.store.findAll('post');
-  },
+    let events = this.store.findAll('page');
+    let posts = this.store.findAll('post');
 
-  activate() {
-    this.set('header.showTerminal', true);
-  },
-
-  deactivate() {
-    this.set('header.showTerminal', false);
+    return hash({
+      events,
+      posts
+    });
   }
 });

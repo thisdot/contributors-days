@@ -10,5 +10,6 @@ export default Page.extend({
   videos: attr('array'),
   video: attr(),
   playlist: attr(),
-  date: attr('date')
+  date: attr('date'),
+  featuredImage: attr()
 });
