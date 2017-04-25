@@ -1,11 +1,9 @@
 <section class="container content-section">
-  <h2>Contributor days</h2>
   <div class="row upcoming-days">
     {{#each (sort-by 'date:desc' model.events) as |event|}}
       {{event-card event=event}}
     {{/each}}
   </div>
-
 
   <h2>
     Updates
