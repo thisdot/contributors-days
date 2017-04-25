@@ -48,7 +48,6 @@
     "ember-data": "^2.9.0",
     "ember-engines": "0.3.4",
     "ember-export-application-global": "^1.0.5",
-    "ember-href-to": "1.12.0",
     "ember-i18n": "5.0.1",
     "ember-lazy-video": "taras/ember-lazy-video#c798ad70e6ac2c845736070664a2ac722bddf2ea",
     "ember-let": "0.5.4",
@@ -61,7 +60,6 @@
     "ember-responsive": "2.0.2",
     "ember-route-action-helper": "2.0.2",
     "ember-router-scroll": "0.2.0",
-    "ember-scroll-to": "0.6.4",
     "ember-truth-helpers": "1.3.0",
     "ember-writer": "this-dot/ember-writer#61bf2d99f7902213b09b674868bdbe1f0e3501d5",
     "loader.js": "^4.0.10"

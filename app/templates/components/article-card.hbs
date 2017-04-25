@@ -3,12 +3,12 @@
     <h3>{{post.title}}</h3>
   {{else}}
     <h3>
-      {{#link-to 'contributor-day.update' framework post.id}}
+      {{#link-to "contributor-day.update" framework post.id}}
         {{post.title}}
       {{/link-to}}
     </h3>
   {{/if}}
-    <div class="date">{{moment-format post.date (get (t 'human-date-format') "string")}}</div>
+    <div class="date">{{moment-format post.date (get (t "human-date-format") "string")}}</div>
 </header>
 
 {{#if showSummary}}
@@ -16,7 +16,7 @@
     {{{post.summary}}}
   </div>
   {{#if hasReadMore}}
-    {{#link-to 'contributor-day.update' framework post.id}}
+    {{#link-to "contributor-day.update" framework post.id class="read-more"}}
       {{t "Read More"}}
     {{/link-to}}
   {{/if}}
