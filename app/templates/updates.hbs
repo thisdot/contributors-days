@@ -1,0 +1,10 @@
+<section class="container updates-container">
+  <header>
+    <h2>Updates</h2>
+  </header>
+  <div class="row">
+    {{#each (sort-by 'date:desc' model) as |update|}}
+      {{article-card post=update class="col-md-8"}}
+    {{/each}}
+  </div>
+</section>

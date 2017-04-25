@@ -11,7 +11,7 @@
 
   <div class="row">
     {{#each (sort-by 'date:desc' model.posts) as |post|}}
-      {{article-card post=post class="col-lg-4"}}
+      {{article-card post=post class="col-lg-6"}}
     {{/each}}
   </div>
 </section>

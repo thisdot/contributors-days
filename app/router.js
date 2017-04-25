@@ -11,6 +11,7 @@ const Router = Ember.Router.extend(Trackable, RouterScroll, {
 Router.map(function() {
   this.route('contributor-day', { path: '/contributor-days/:framework' });
   this.route('about');
+  this.route('updates');
 });
 
 export default Router;

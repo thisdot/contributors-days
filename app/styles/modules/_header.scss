@@ -21,6 +21,13 @@
   }
 
   .titles {
+    @include mobileOnly() {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     p {
       text-transform: uppercase;
       color: $main-color;
@@ -45,6 +52,9 @@
   }
 
   @include tablet() {
+    .communities h2 {
+      margin-top: unit-space(1);
+    }
     nav {
       display: flex;
       flex-flow: row wrap;
@@ -74,6 +84,9 @@
   }
 
   @include desktop() {
+    .communities h2 {
+      margin-top: 0;
+    }
     &.show-terminal {
       padding: unit-space(4);
     }
@@ -82,5 +95,55 @@
       align-items: center;
     }
   }
+}
 
+.nav-icon {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: $main-color;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2), &:nth-child(3) {
+      top: 9px;
+    }
+    &:nth-child(4) {
+      top: 18px;
+    }
+  }
+  &.open span {
+    &:nth-child(1) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    &:nth-child(4) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+  }
 }
