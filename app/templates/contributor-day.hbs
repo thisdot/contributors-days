@@ -8,9 +8,15 @@
       </h2>
     </div>
     <div class="col-md-3 framework-meta">
-      {{moment-format model.date (get (t 'human-date-format') "string")}}
+      <h3>Date</h3>
+      {{#if model.date}}
+        {{moment-format model.date (get (t 'human-date-format') "string")}}
+      {{else}}
+        TBA
+      {{/if}}
     </div>
     <div class="col-md-3 framework-meta">
+      <h3>Location</h3>
       {{model.location}}
     </div>
   </header>
@@ -33,55 +39,26 @@
 
 <section class="container framework-sign-up">
   <div class="row">
-    <div class="col-md-8">
-      <h2>Sign up</h2>
-      <p>
-        Sign up to {{model.title}} to be notified of upcoming events, updates and videos.
-      </p>
-      <form class="" action="index.html" method="post" class="row">
-        <div class="col-lg-3 col-md-6">
-          <label>Name</label>
-          <input type="text" name="" value="" class="input-text">
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <label>Email</label>
-          <input type="text" name="" value="" class="input-text">
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <label>Company</label>
-          <input type="text" name="" value="" class="input-text">
-        </div>
-        <div class="col-lg-3 col-md-6 signup-button">
-          <label>.</label>
-          <button type="submit" class="button">
-            Sign up
-          </button>
-        </div>
-      </form>
-    </div>
-    {{#if (and model.apply isFuture)}}
-      <div class="col-md-4">
+    <div class="col-md-4">
+      <h2>Updates</h2>
+      {{#each (sort-by 'date:desc' updates) as |post|}}
+        {{article-card post=post showContent=false}}
+      {{/each}}
+      {{#if model.isApplyOpen}}
         <h2>Apply</h2>
-        <p>Aplications are open for {{model.title}} contributor days. Apply now!</p>
+        <p>Applications are open for {{model.title}}.</p>
         <p>
           <a href="{{model.apply}}" target="_blank" class="button action-button">
             Apply
           </a>
         </p>
-      </div>
-    {{/if}}
+      {{/if}}
+    </div>
+    {{email-subscribe class="col-md-8" event=event.id}}
   </div>
-
 </section>
 
 {{#if model.videos}}
-  {{!videos-list
-    title="Talks and discussions"
-    tagName="section"
-    class="videos-list container"
-    videos=model.videos
-    playlist=model.playlist
-  }}
   <section class="container videos-list">
     <h2>Talks and discussions</h2>
     <div class="row">
