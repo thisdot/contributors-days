@@ -7,9 +7,12 @@ const { computed } = Ember;
 
 export default Page.extend({
   location: attr(),
+
   apply: attr(),
+
   framework: attr(),
   attendees: attr('array'),
+
   leads: attr('array'),
   videos: attr('array'),
   video: attr(),

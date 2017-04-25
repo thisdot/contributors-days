@@ -14,9 +14,6 @@
       {{#each (slice 0 3 posts) as |post|}}
         {{article-card post=post class="col-lg-4" showSummary=true}}
       {{/each}}
-      {{#if (gt posts.length 3)}}
-        <a href="{{href-to 'updates'}}">See all updates</a>
-      {{/if}}
     {{/let}}
   </div>
 </section>

@@ -10,6 +10,8 @@ export default Ember.Component.extend({
   showSummary: false,
   showContent: true,
 
+  framework: computed.oneWay('post.tags.firstObject.id'),
+
   hasReadMore: computed('post.body', function() {
     let body = this.get('post.body');
     return !!body.match(READMORE);

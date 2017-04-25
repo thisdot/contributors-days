@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:updates', 'Unit | Route | updates', {
+moduleFor('route:contributor-day/update', 'Unit | Route | contributor day/update', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

@@ -1,4 +1,7 @@
 @import 'foundation/all';
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
 @import 'modules/header';
 @import 'modules/footer';
 @import 'modules/terminal';
