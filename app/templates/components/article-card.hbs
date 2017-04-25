@@ -1,12 +1,19 @@
 <header>
-  <h3>{{post.title}}</h3>
-  <div class="date">{{moment-format post.date (get (t 'human-date-format') "string")}}</div>
+  {{#if showContent}}
+    <h3 id={{post.id}}>{{post.title}}</h3>
+  {{else}}
+    <h3><a href="{{href-to "updates"}}#{{post.id}}">{{post.title}}</a></h3>
+  {{/if}}
+    <div class="date">{{moment-format post.date (get (t 'human-date-format') "string")}}</div>
 </header>
 
-{{#if showContent}}
-  <div class="content">{{{post.body}}}</div>
-
-  {{#if post.link}}
-    <a href="{{post.link}}" class="read-more">{{if post.linkText post.linkText (t 'Read More')}}</a>
+{{#if showSummary}}
+  <div class="content summary">
+    {{{post.summary}}}
+  </div>
+  {{#if hasReadMore}}
+    <a href="{{href-to "updates"}}#{{post.id}}" class="read-more">{{t "Read More"}}</a>
   {{/if}}
+{{else if showContent}}
+  <div class="content">{{{body}}}</div>
 {{/if}}

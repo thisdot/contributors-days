@@ -3,8 +3,12 @@
     <h2>Updates</h2>
   </header>
   <div class="row">
-    {{#each (sort-by 'date:desc' model) as |update|}}
-      {{article-card post=update class="col-md-8"}}
-    {{/each}}
+    {{#href-scroller}}
+      {{#let (sort-by 'date:desc' model) as |posts|}}
+        {{#each posts as |post|}}
+          {{article-card post=post class="col-lg-12"}}
+        {{/each}}
+      {{/let}}
+    {{/href-scroller}}
   </div>
 </section>
