@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('update', { path: '/update/:update_id'});
   });
   this.route('about');
+  this.route('sponsors');
 });
 
 export default Router;

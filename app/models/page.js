@@ -20,6 +20,7 @@ export default Page.extend({
   date: attr('date'),
   featuredImage: attr(),
   message: attr('string'),
+  sponsors: attr('array'),
 
   isPast: computed('date', function() {
     let today = moment();
