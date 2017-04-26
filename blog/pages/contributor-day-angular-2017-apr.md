@@ -34,6 +34,11 @@ attendees:
     - igor-kamenetsky
     - bill-odom
 featured-image: /media/rxjs/rxjs-contributor-days-24.jpg
+sponsors: 
+  - name: Angular Bootcamp
+    logo: /media/logos/angular-boot-camp-logo.png
+  - name: CareerBuilder
+    logo: /media/logos/career-builder-logo.png
 ---
 Angular Contributor Day brought together developers from the Angular Core Team and a group of Angular community members.
 

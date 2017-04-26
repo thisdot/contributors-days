@@ -96,3 +96,15 @@
     </div>
   </section>
 {{/if}}
+
+{{#if model.sponsors}}
+  <section class="container">
+    <h2>Sponsors</h2>
+    <p>Thank you to our generous sponsors for helping put on this event.</p>
+    <div class="row sponsors-list">
+      {{#each model.sponsors as |sponsor|}}
+        <img src="{{sponsor.logo}}" alt="{{sponsor.name}} logo">
+      {{/each}}
+    </div>
+  </section>
+{{/if}}
