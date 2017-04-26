@@ -1,24 +1,48 @@
 <h2>Sign up</h2>
-<p>
-  Sign up to Contributor Days newsletter to be notified of updates, upcoming events and videos.
-</p>
-<form class="" action="index.html" method="post" class="row">
-  <div class="col-lg-3 col-md-6">
-    <label>Name</label>
-    <input type="text" name="" value="" class="input-text">
-  </div>
-  <div class="col-lg-3 col-md-6">
-    <label>Company</label>
-    <input type="text" name="" value="" class="input-text">
-  </div>
-  <div class="col-lg-3 col-md-6">
-    <label>Email</label>
-    <input type="text" name="" value="" class="input-text">
-  </div>
-  <div class="col-lg-3 col-md-6 signup-button">
-    <label>.</label>
-    <button type="submit" class="button">
-      Sign up
-    </button>
-  </div>
-</form>
+{{#if submitTask.lastSuccessful}}
+  <p>Welcome aboard, we'll keep you posted of any developments.</p>
+{{else}}
+  <p>
+    Sign up to Contributor Days newsletter to be notified of updates, upcoming events and videos.
+  </p>
+  <form method="post" class="row" {{action "submit" on="submit"}}>
+    <div class="col-lg-3 col-md-6">
+      <label>Name</label>
+      <input 
+        type="text" 
+        name="name" 
+        value={{name}} 
+        oninput={{action (action (mut name)) value="target.value"}} 
+        class="input-text"
+        required
+      >
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <label>Company</label>
+      <input 
+        type="text" 
+        name="company" 
+        value={{company}} 
+        oninput={{action (action (mut company)) value="target.value"}}
+        class="input-text"
+      >
+    </div>
+    <div class="col-lg-3 col-md-6">
+      <label>Email</label>
+      <input 
+        type="email" 
+        name="email" 
+        value={{email}} 
+        oninput={{action (action (mut email)) value="target.value"}}
+        class="input-text"
+        required
+      >
+    </div>
+    <div class="col-lg-3 col-md-6 signup-button">
+      <label>.</label>
+      <button type="submit" class="button">
+        Sign up
+      </button>
+    </div>
+  </form>
+{{/if}}
