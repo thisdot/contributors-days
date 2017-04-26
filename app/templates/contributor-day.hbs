@@ -98,12 +98,14 @@
 {{/if}}
 
 {{#if model.sponsors}}
-  <section class="container">
+  <section class="container framework-sponsors">
     <h2>Sponsors</h2>
     <p>Thank you to our generous sponsors for helping put on this event.</p>
     <div class="row sponsors-list">
       {{#each model.sponsors as |sponsor|}}
-        <img src="{{sponsor.logo}}" alt="{{sponsor.name}} logo">
+        <div class="col-md-4">
+          <img src="{{sponsor.logo}}" alt="{{sponsor.name}} logo">
+        </div>
       {{/each}}
     </div>
   </section>
