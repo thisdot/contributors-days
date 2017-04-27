@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+import ScrollTop from '../mixins/scroll-top';
+
 let days = {
   rxjs: 'contributor-day-rxjs-2017',
   angular: 'contributor-day-angular-2017-apr',
@@ -7,7 +9,7 @@ let days = {
   webpack: 'contributor-day-webpack-2017'
 };
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(ScrollTop, {
   model({ framework }) {
     if (days[framework]) {
       framework = days[framework];

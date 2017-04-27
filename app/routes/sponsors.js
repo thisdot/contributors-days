@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
+import ScrollTop from '../mixins/scroll-top';
+
+export default Ember.Route.extend(ScrollTop, {
   model() {
     return this.store.findRecord('page', 'sponsors');
   }
