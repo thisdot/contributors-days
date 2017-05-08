@@ -10,6 +10,8 @@
     @extend .framework-header;
     text-align: right;
     border: none !important;
+    justify-content: flex-end;
+
     h3.title {
       font-size: 20px;
     }
@@ -19,6 +21,7 @@
     }
 
     @include mobileOnly() {
+      justify-content: center;
       .day-logo {
         margin: 0 auto;
       }
