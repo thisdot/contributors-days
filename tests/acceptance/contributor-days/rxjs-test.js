@@ -40,7 +40,7 @@ test('visiting /contributor-days/rxjs', function(assert) {
 
   andThen(function() {
     assert.ok($('.videos-list').length, 'Videos playlist is visible');
-    assert.equal($('.videos-list .list-item').length, 10, '10 videos are show');
+    assert.equal($('.videos-list .video-card').length, 10, '10 videos are show');
   });
 });
 
