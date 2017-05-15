@@ -1,0 +1,116 @@
+.framework-header {
+  border-bottom: 2px solid $dark-alt-color;
+  padding: unit-space(2) 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  .framework-meta {
+    font-size: 16px;
+    color: $main-color;
+    border-left: 1px solid $dark-alt-color;
+    text-align: center;
+    padding-top: unit-space(1);
+    padding-bottom: unit-space(1);
+  }
+
+  .logo-wrap {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 0;
+    .day-logo {
+      margin-left: 0;
+    }
+  }
+
+  .day-logo {
+    @each $framework in $frameworks {
+      &.#{$framework} {
+        @include makeLogo('images/#{$framework}-day-logo.svg', 118px, 82px);
+      }
+    }
+  }
+  .title {
+    font-size: 23px;
+    font-weight: normal;
+    color: $main-color;
+    text-transform: uppercase;
+    strong {
+      font-weight: bold;
+      display: block;
+    }
+  }
+}
+
+.framework-info {
+  .framework-header {
+    .title {
+      line-height: 30px;
+      padding-top: 10px;
+    }
+  }
+}
+
+.video-wrapper {
+  position: relative;
+	padding-bottom: 52.8%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+
+  iframe {
+    position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  }
+}
+
+.framework-intro {
+  padding: unit-space(2) 0;
+  p {
+    font-size: 18px;
+  }
+}
+
+.framework-people {
+  margin-top: unit-space(2);
+}
+
+.framework-sign-up {
+  padding-top: unit-space(1);
+  padding-bottom: unit-space(1);
+  border-bottom: 2px solid $dark-alt-color;
+
+  h2 {
+    color: darken($dark-alt-color, 20);
+  }
+
+  label {
+    color: $main-color;
+    font-weight: bold;
+    margin: unit-space(0.5) 0;
+    display: block;
+  }
+  form {
+    margin-top: unit-space(1);
+  }
+  .input-text {
+    display: block;
+    width: 100%;
+  }
+  .signup-button {
+    label {
+      color: #fff;
+    }
+    .button {
+      background: $main-color;
+      color: #fff;
+    }
+  }
+  .action-button {
+    background: $action-color;
+    color: #fff;
+    border-color: $action-color;
+  }
+}

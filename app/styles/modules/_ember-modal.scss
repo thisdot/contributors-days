@@ -1,0 +1,8 @@
+.ember-modal-overlay {
+  background: rgba($main-color, 0.5);
+  z-index: 10000;
+  .ember-modal-dialog {
+    box-shadow: 0 3px 10px rgba($main-color, 0.3);
+    @extend .container;
+  }
+}

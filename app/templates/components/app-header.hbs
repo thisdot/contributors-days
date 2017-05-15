@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="titles col-md-4">
+      <h1>
+        {{#link-to 'index'}}Contributor Days{{/link-to}}
+      </h1>
+      {{#if media.isMobile}}
+        <button class="nav-icon {{if menuOpen 'open'}}" {{action 'toggleMenu'}}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      {{/if}}
+    </div>
+
+    {{#if (or (and media.isMobile menuOpen) (not media.isMobile))}}
+      {{#if showTerminal}}
+        <div class="col-md-7 push-lg-1">
+          {{terminal-prompt commands=commands}}
+        </div>
+      {{else}}
+        <div class="col-md-7">
+          <div class="row">
+            <div class="frameworks col-lg-7 col-md-12">
+              <h2>
+                Communities
+              </h2>
+              <nav>
+                {{#link-to 'contributor-day' 'rxjs'}} RxJS {{/link-to}}
+                {{#link-to 'contributor-day' 'angular'}} Angular {{/link-to}}
+                {{#link-to 'contributor-day' 'react'}} React {{/link-to}}
+                {{#link-to 'contributor-day' 'webpack'}} Webpack {{/link-to}}
+              </nav>
+            </div>
+            <div class="col-lg-5 col-md-12 communities">
+              <h2>About</h2>
+              <nav>
+                {{#link-to 'about'}} FAQ {{/link-to}}
+                {{#link-to 'sponsors'}} Sponsors {{/link-to}}
+              </nav>
+            </div>
+          </div>
+        </div>
+      {{/if}}
+    {{/if}}
+  </div>
+</div>

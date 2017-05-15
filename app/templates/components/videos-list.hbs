@@ -1,0 +1,15 @@
+{{#if title}}
+  <h2>{{title}}</h2>
+{{/if}}
+<div class="row">
+  <nav class="col-lg-3">
+    {{#each videos as |video|}}
+      <button class="list-item {{if (eq selected video) "active"}}" {{action (action (mut selected) video)}}>
+        {{video.title}}
+      </button>
+    {{/each}}
+  </nav>
+  <div class="col-lg-9">
+    {{lazy-video class="video-wrapper" url=selected.url width="560" height="315"}}
+  </div>
+</div>

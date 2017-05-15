@@ -1,0 +1,62 @@
+.day-card {
+  box-sizing: border-box;
+  color: $main-color;
+  @include desktop() {
+    justify-content: center;
+    align-items: center;
+  }
+
+  header {
+    @extend .framework-header;
+    text-align: right;
+    border: none !important;
+    justify-content: flex-end;
+
+    h3.title {
+      font-size: 20px;
+    }
+    .day-logo {
+      background-position: right center !important;
+      margin-bottom: unit-space(1);
+    }
+
+    @include mobileOnly() {
+      justify-content: center;
+      .day-logo {
+        margin: 0 auto;
+      }
+      h3.title {
+        text-align: center;
+      }
+    }
+  }
+
+  p {
+    font-size: 18px;
+    text-align: left;
+    margin: 0;
+    padding: unit-space(0.5);
+  }
+  @include mobileOnly() {
+    p {
+      text-align: center;
+    }
+    .row {
+      margin-bottom: 0;
+    }
+  }
+
+  footer {
+    padding: unit-space(1);
+    text-align: right;
+    box-sizing: border-box;
+    width: 100%;
+
+    em {
+      display: inline-block;
+      font-style: normal;
+      max-width: 140px;
+      text-align: left;
+    }
+  }
+}

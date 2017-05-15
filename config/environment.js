@@ -9,7 +9,7 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     googleFonts: [
-      'Karla:400,700',
+      'Raleway:400,700',
       'PT+Mono'
     ],
     EmberENV: {
@@ -27,7 +27,7 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-    
+
     fastboot: {
       hostWhitelist: [storageHost, /^localhost:\d+$/]
     }

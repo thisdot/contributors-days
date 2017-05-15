@@ -2,21 +2,26 @@ $tablet-width: 768px;
 $desktop-width: 1024px;
 
 // Titles styles
-$title-font: 'PT Mono', sans-serif;
+$title-font: 'Raleway', sans-serif;
 $title-size: 18px;
 $title-line-height: 21px;
 
 // Body copy
-$body-font: 'Karla', sans-serif;
-$body-size: 20px;
-$body-line-height: 26px;
+$body-font: 'Raleway', sans-serif;
+$body-size: 18px;
+$body-line-height: 24px;
 
+$code-font: 'PT Mono', sans-serif;
 
 // Colors
 $main-color: #515978;
 $alt-color: #dff2f4;
+$dark-alt-color: #AED4D6;
 $action-color: #f5655f;
 
 $contrast-color: #CCCCCC;
 $text-color: #4d4d4d;
 $title-color: $action-color;
+
+
+$frameworks: 'rxjs' 'angular' 'react' 'webpack';

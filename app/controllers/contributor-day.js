@@ -1,20 +1,12 @@
 import Ember from 'ember';
-const { computed, get } = Ember;
+import recordsById from '../utils/records-by-id';
+const { computed } = Ember;
 
 export default Ember.Controller.extend({
-  attendees: computed('model.event.slug', 'model.people', function() {
-    let people = this.get('model.people');
-    let eventKey = `cd-${this.get('model.event.slug')}`;
-    return people.filter((person) => {
-      return get(person, 'featured').includes(eventKey);
-    }).sortBy('order');
+  attendees: recordsById('model.attendees', 'author'),
+  leads: recordsById('model.leads', 'author'),
+  tag: computed('model.framework', function() {
+    return this.store.find('tag', this.get('model.framework'));
   }),
-
-  leads: computed('model.event.slug', 'model.people', function() {
-    let people = this.get('model.people');
-    let eventKey = `lead-${this.get('model.event.slug')}`;
-    return people.filter((person) => {
-      return get(person, 'featured').includes(eventKey);
-    }).sortBy('order');
-  })
+  updates: computed.oneWay('tag.posts')
 });

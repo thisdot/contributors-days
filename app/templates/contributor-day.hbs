@@ -1,62 +1,112 @@
 {{outlet}}
-<div class="container about-day">
-  <header>
-    {{#link-to 'index' class="button go-back"}}&laquo; Home{{/link-to}}
+
+<section class="container framework-info">
+  <header class="framework-header">
+    <div class="col-md-6 logo-wrap">
+      <em class="{{model.framework}} day-logo col-md-4"></em>
+      <h2 class="title col-md-8">
+        <strong>{{model.framework}}</strong>
+        {{t "Contributor Day"}}
+      </h2>
+    </div>
+    <div class="col-md-3 framework-meta">
+      <h3>Date</h3>
+      {{#if model.date}}
+        {{moment-format model.date (get (t 'human-date-format') "string")}}
+      {{else}}
+        TBA
+      {{/if}}
+    </div>
+    <div class="col-md-3 framework-meta">
+      <h3>Location</h3>
+      {{model.location}}
+    </div>
   </header>
+
+  {{#if model.video}}
+    <div class="row framework-intro">
+      <div class="col-lg-3">
+        {{#if model.body}}
+          {{{model.body}}}
+        {{else}}
+          <p>{{t "contributor-day.purpose"}}</p>
+        {{/if}}
+      </div>
+      <div class="col-lg-9">
+        {{lazy-video class="video-wrapper" url=model.video.url width="560" height="315"}}
+      </div>
+    </div>
+  {{/if}}
+</section>
+
+<section class="container framework-sign-up">
   <div class="row">
-    <div class="col-md-4 framework-logo">
-      <img src="/assets/images/{{concat model.event.slug '-day-logo'}}.svg" alt="" />
+    <div class="col-md-4">
+      <h2>Updates</h2>
+      {{#each (sort-by 'date:desc' updates) as |post|}}
+        {{article-card post=post showContent=false}}
+      {{/each}}
+      {{#if model.isApplyOpen}}
+        <h2>Apply</h2>
+        <p>Applications are open for {{model.title}}.</p>
+        <p>
+          <a href="{{model.apply}}" target="_blank" class="button action-button">
+            Apply
+          </a>
+        </p>
+      {{/if}}
     </div>
-    <div class="col-md-6">
-      <h1>{{model.event.title}}</h1>
-      <p>
-        Contributor Days strives to create stronger relationships and focus in the existing community while providing an opportunity for other developers who may not have contributed to the specific project a chance to explore new opportunities.
-      </p>
-    </div>
-
-    <h2 class="col-md-4">When</h2>
-    <p class="col-md-6">
-      {{moment-format model.event.date 'MM/DD/YYYY'}}
-    </p>
-
-    <h2 class="col-md-4">Where</h2>
-    <p class="col-md-6">
-      {{model.event.location}}
-    </p>
-
-    <h2 class="col-md-4">Leads</h2>
-    <div class="col-md-6">
-      <div class="row">
-        {{#each leads as |lead|}}
-          {{person-card person=lead class="col-md-4"}}
-        {{/each}}
-      </div>
-    </div>
-
-    <h2 class="col-md-4">Agenda</h2>
-    <p class="col-md-6">
-      <ol>
-        <li>Vision of open source framework / library from authors</li>
-        <li>Roundtable conversations about the direction of the framework / library</li>
-        <li>Collaborative mini-hack sessions to jumpstart major features or fix major concerns in key projects</li>
-        <li>Food, fun, bonding</li>
-      </ol>
-    </p>
-
-    <h2 class="col-md-4">Ready?</h2>
-    <p class="col-md-6">
-      <a href="{{model.event.apply}}" class="button action-button" target="_blank">Apply</a>
-    </p>
-
-    {{#if attendees}}
-      <h2 class="col-md-4">Attendees</h2>
-      <div class="col-md-6">
-        <div class="row">
-          {{#each attendees as |attendee|}}
-            {{person-card person=attendee class="col-md-4"}}
-          {{/each}}
-        </div>
-      </div>
-    {{/if}}
+    {{email-subscribe class="col-md-8" event=event.id}}
   </div>
-</div>
+</section>
+
+{{#if model.videos}}
+  <section class="container videos-list">
+    <h2>Talks and discussions</h2>
+    <div class="row">
+      {{#each model.videos as |video|}}
+        {{video-card video=video class="col-lg-4 col-md-6"}}
+      {{/each}}
+    </div>
+  </section>
+{{/if}}
+
+{{#if leads}}
+  <section class="container framework-people">
+    <h2>
+      Leads
+    </h2>
+    <div class="row leads-list">
+      {{#each leads as |lead|}}
+        {{person-card person=lead class="col-md-3"}}
+      {{/each}}
+    </div>
+  </section>
+{{/if}}
+
+{{#if attendees}}
+  <section class="container framework-people">
+    <h2>
+      Attendees
+    </h2>
+    <div class="row attendees-list">
+      {{#each attendees as |attendee|}}
+        {{person-card person=attendee class="col-md-3"}}
+      {{/each}}
+    </div>
+  </section>
+{{/if}}
+
+{{#if model.sponsors}}
+  <section class="container framework-sponsors">
+    <h2>Sponsors</h2>
+    <p>Thank you to our generous sponsors for helping put on this event.</p>
+    <div class="row sponsors-list">
+      {{#each model.sponsors as |sponsor|}}
+        <div class="col-md-4">
+          <img src="{{sponsor.logo}}" alt="{{sponsor.name}} logo">
+        </div>
+      {{/each}}
+    </div>
+  </section>
+{{/if}}

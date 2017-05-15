@@ -1,0 +1,40 @@
+.videos-list {
+  padding: unit-space(1) 0;
+
+  h2 {
+    margin-bottom: unit-space(2);
+    margin-top: unit-space(2);
+  }
+
+  nav {
+    .list-item {
+      border: none;
+      background: none;
+      outline: none;
+      text-align: left;
+      display: block;
+      cursor: pointer;
+
+      font-family: $body-font;
+      letter-spacing: 2px;
+      line-height: 20px;
+      font-size: 16px;
+      padding: 8px 5px;
+      color: $main-color;
+      font-weight: bold;
+      border-top: 1px solid $dark-alt-color;
+      width: 100%;
+      box-sizing: border-box;
+
+      &.active {
+        color: $action-color !important;
+      }
+      &:first-child {
+        border-top: none;
+      }
+      &:nth-child(odd) {
+        color: lighten($main-color, 15);
+      }
+    }
+  }
+}

@@ -15,6 +15,8 @@ export default Ember.Route.extend({
       'cat': 'commands/cat-command',
     };
 
-    return commands;
+    return {
+      commands
+    };
   }
 });

@@ -3,7 +3,5 @@ name: Pascal Precht
 title: Google Developer Advocate
 twitter: pascalprecht
 github: https://github.com/pascalprecht
-image: /media/people/pascal-precht.jpeg
-featured: cd-angular
-order: 90
+image: /media/people/pascal-precht.jpg
 ---

@@ -1,17 +1,19 @@
 import Ember from 'ember';
-const { RSVP } = Ember;
 
-export default Ember.Route.extend({
+import ScrollTop from '../mixins/scroll-top';
+
+let days = {
+  rxjs: 'contributor-day-rxjs-2017',
+  angular: 'contributor-day-angular-2017-apr',
+  react: 'contributor-day-react-2017',
+  webpack: 'contributor-day-webpack-2017'
+};
+
+export default Ember.Route.extend(ScrollTop, {
   model({ framework }) {
-    let people = this.store.findAll('author');
-    let event = this.store.findAll('post')
-    .then((events) => {
-      return events.findBy('slug', framework);
-    });
-
-    return RSVP.hash({
-      people,
-      event
-    });
+    if (days[framework]) {
+      framework = days[framework];
+    }
+    return this.store.findRecord('page', framework);
   }
 });

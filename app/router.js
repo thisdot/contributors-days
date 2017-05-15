@@ -8,7 +8,11 @@ const Router = Ember.Router.extend(Trackable, {
 });
 
 Router.map(function() {
-  this.route('contributor-day', { path: 'contributor-days/:framework' });
+  this.route('contributor-day', { path: '/contributor-days/:framework' }, function() {
+    this.route('update', { path: '/update/:update_id'});
+  });
+  this.route('about');
+  this.route('sponsors');
 });
 
 export default Router;

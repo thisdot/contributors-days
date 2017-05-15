@@ -5,6 +5,7 @@
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
   color: $text-color;
+  letter-spacing: 1px;
   em {
     font-style: italic;
   }
@@ -38,7 +39,7 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   color: $main-color;
 }

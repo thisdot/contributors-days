@@ -1,0 +1,63 @@
+<header class="col-lg-4">
+  <em class="{{event.framework}} day-logo"></em>
+  <h3 class="title">
+    <strong>{{event.framework}}</strong>
+    Contributor Days
+  </h3>
+</header>
+
+
+<div class="col-lg-8">
+  {{#if hasImage}}
+      {{#link-to 'contributor-day' event.framework}}
+        <img src="{{event.featuredImage}}" alt="{{event.framework}}">
+      {{/link-to}}
+  {{/if}}
+
+  {{#if (and (not hasVideos) isPast)}}
+    <p>
+      The videos from the event will be available shortly.
+  Sign up be notified when {{event.title}} videos become available.
+    </p>
+    <p>
+      {{#link-to 'contributor-day' event.framework class="button action-button"}}
+        Sign up
+      {{/link-to}}
+    </p>
+  {{/if}}
+
+  {{#if (and hasVideos isPast)}}
+    <p>
+      {{event.title}} brought together the creators and users of the library to discuss concerns and plan improvements.
+    </p>
+    <p>
+      {{#link-to 'contributor-day' event.framework class="button action-button"}}
+        Contribute
+      {{/link-to}}
+    </p>
+  {{/if}}
+
+
+  {{#if (and isFuture canApply)}}
+    <p>
+      Aplications are open for {{event.title}} contributor days. Apply now!
+    </p>
+    <p>
+      {{#link-to 'contributor-day' event.framework class="button action-button"}}
+        Apply
+      {{/link-to}}
+    </p>
+  {{/if}}
+
+  {{#if (and isFuture (not canApply))}}
+    <p>
+      We are not yet accepting applications for {{event.title}}. Subscribe to be notified when applications are open.
+    </p>
+    <p>
+      {{#link-to 'contributor-day' event.framework class="button action-button"}}
+        Sign up
+      {{/link-to}}
+    </p>
+  {{/if}}
+
+</div>

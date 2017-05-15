@@ -1,0 +1,19 @@
+<header>
+  {{#if showContent}}
+  <h3>{{post.title}}</h3>
+  {{else}}
+  <h3>
+    {{#link-to "contributor-day.update" framework post.id}} {{post.title}} {{/link-to}}
+  </h3>
+  {{/if}}
+  <div class="date"><small>Posted on</small> {{moment-format post.date (get (t "human-date-format") "string")}}</div>
+</header>
+
+{{#if showSummary}}
+<div class="content summary">
+  {{{post.summary}}}
+</div>
+{{#if hasReadMore}} {{#link-to "contributor-day.update" framework post.id class="read-more"}} {{t "Read More"}} {{/link-to}}
+{{/if}} {{else if showContent}}
+<div class="content">{{{body}}}</div>
+{{/if}}

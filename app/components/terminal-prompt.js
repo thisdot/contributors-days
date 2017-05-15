@@ -1,10 +1,12 @@
 import Ember from 'ember';
-const { isPresent } = Ember;
+const { isPresent, inject: { service } } = Ember;
 
 export default Ember.Component.extend({
   classNames: ['terminal-wrap'],
   promptText: null,
   pastCommands: null,
+
+  fastboot: service(),
 
   init() {
     this._super(...arguments);

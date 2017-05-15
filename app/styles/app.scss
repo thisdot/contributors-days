@@ -1,4 +1,7 @@
 @import 'foundation/all';
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
+
 @import 'modules/header';
 @import 'modules/footer';
 @import 'modules/terminal';
@@ -6,6 +9,14 @@
 @import 'modules/index';
 @import 'modules/person-card';
 @import 'modules/contributor-day';
+@import 'modules/event-card';
+@import 'modules/framework-info';
+@import 'modules/videos-list';
+@import 'modules/article-card';
+@import 'modules/video-card';
+@import 'modules/ember-modal';
+@import 'modules/sponsors-list';
+
 
 body {
   @include body-copy();
@@ -20,10 +31,14 @@ body {
   }
 
   .row {
-    margin-bottom: unit-space(2);
+    margin-bottom: unit-space(1);
   }
 
   img {
     max-width: 100%;
   }
+}
+
+.small {
+  font-size: 90%;
 }
