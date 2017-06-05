@@ -42,4 +42,10 @@ test('visiting /contributor-days/angular', function(assert) {
     "Bill Odom"
   ].forEach(name => showsPerson(name, '.attendees-list'));
 
+  andThen(function(){
+    assert.equal(find('.leads-list .person-card').length, 5, '5 leads displayed');
+    assert.equal(find('.attendees-list .person-card').length, 21, '21 attendees displayed');
+    assert.equal(find('.sponsors-list').length, 1, 'Sponsors list is displayed');
+  });
+
 });
