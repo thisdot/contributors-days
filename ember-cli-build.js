@@ -10,6 +10,7 @@ module.exports = function(defaults) {
       ]
     },
     fingerprint: {
+      generateAssetMap: true,
       prepend: '//storage.googleapis.com/contributor-days/',
       replaceExtensions: ['html', 'js', 'css', 'json'],
       exclude: ['assets/assetMap.json'],

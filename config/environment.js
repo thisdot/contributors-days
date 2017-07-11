@@ -29,7 +29,7 @@ module.exports = function(environment) {
     },
 
     fastboot: {
-      hostWhitelist: [storageHost, /^localhost:\d+$/]
+      hostWhitelist: [storageHost, /^localhost:\d+$/, /(www\.)?contributordays\.com$/]
     }
   };
 
@@ -66,6 +66,7 @@ module.exports = function(environment) {
         }
       ]
     };
+    ENV.host = 'https://www.contributordays.com';
   }
 
   return ENV;

@@ -1,3 +1,4 @@
+/* global showsPerson */
 import { test } from 'qunit';
 import moduleForAcceptance from 'contributors-days/tests/helpers/module-for-acceptance';
 

@@ -10,10 +10,8 @@
   </h2>
 
   <div class="row">
-    {{#let (sort-by 'date:desc' model.posts) as |posts|}}
-      {{#each (slice 0 3 posts) as |post|}}
-        {{article-card post=post class="col-lg-4" showSummary=true}}
-      {{/each}}
-    {{/let}}
+    {{#each (slice 0 3 (sort-by 'date:desc' model.posts)) as |post|}}
+      {{article-card post=post class="col-lg-4" showSummary=true}}
+    {{/each}}
   </div>
 </section>
