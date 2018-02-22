@@ -1,4 +1,4 @@
-import { test } from 'qunit';
+import { test, skip } from 'qunit';
 import moduleForAcceptance from 'contributors-days/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | home');
@@ -11,7 +11,7 @@ test('visiting /home', function(assert) {
   });
 });
 
-test('visiting rxjs contibutor day page by clicking link on navbar', function(assert) {
+test('visiting rxjs contributor day page by clicking link on navbar', function(assert) {
   visit('/');
 
   click('a:contains(RxJS)');
@@ -21,7 +21,7 @@ test('visiting rxjs contibutor day page by clicking link on navbar', function(as
   });
 });
 
-test('visiting angular contibutor day page by clicking link on navbar', function(assert) {
+test('visiting angular contributor day page by clicking link on navbar', function(assert) {
   visit('/');
 
   click('a:contains(Angular)');
@@ -31,7 +31,7 @@ test('visiting angular contibutor day page by clicking link on navbar', function
   });
 });
 
-test('visiting react contibutor day page by clicking link on navbar', function(assert) {
+test('visiting react contributor day page by clicking link on navbar', function(assert) {
   visit('/');
 
   click('a:contains(React)');
@@ -41,13 +41,13 @@ test('visiting react contibutor day page by clicking link on navbar', function(a
   });
 });
 
-test('visiting webpack contibutor day page by clicking link on navbar', function(assert) {
+skip('visiting vue contributor day page by clicking link on navbar', function(assert) {
   visit('/');
 
-  click('a:contains(Webpack)');
+  click('a:contains(Vue)');
 
   andThen(function() {
-    assert.equal(currentURL(), '/contributor-days/webpack');
+    assert.equal(currentURL(), '/contributor-days/vue');
   });
 });
 
