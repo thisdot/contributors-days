@@ -12,7 +12,6 @@ export default Page.extend({
 
   framework: attr(),
   attendees: attr('array'),
-  moderators: attr('array'),
   leads: attr('array'),
   videos: attr('array'),
   video: attr(),

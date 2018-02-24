@@ -84,19 +84,6 @@
   </section>
 {{/if}}
 
-{{#if moderators}}
-  <section class="container framework-people">
-    <h2>
-      Moderators
-    </h2>
-    <div class="row moderators-list">
-      {{#each moderators as |person|}}
-        {{person-card person=person class="col-md-3"}}
-      {{/each}}
-    </div>
-  </section>
-{{/if}}
-
 {{#if attendees}}
   <section class="container framework-people">
     <h2>

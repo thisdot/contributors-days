@@ -11,10 +11,6 @@ leads:
   - sarah-drasner
   - thorsten
   - tracy-lee
-moderators:
-  - evan-you
-  - chris-fritz
-  - tracy-lee
 attendees:
   - sebastien-chopin
   - alexandre-chopin
