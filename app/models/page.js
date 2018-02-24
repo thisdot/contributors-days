@@ -17,6 +17,7 @@ export default Page.extend({
   video: attr(),
   playlist: attr(),
   date: attr('date'),
+  hardCodedDate: attr(),
   featuredImage: attr(),
   message: attr('string'),
   sponsors: attr('array'),

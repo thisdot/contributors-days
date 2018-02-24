@@ -11,7 +11,9 @@
     </div>
     <div class="col-md-3 framework-meta">
       <h3>Date</h3>
-      {{#if model.date}}
+      {{#if model.hardCodedDate}}
+        {{model.hardCodedDate}}
+      {{else if model.date}}
         {{moment-format model.date (get (t 'human-date-format') "string")}}
       {{else}}
         TBA
