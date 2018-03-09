@@ -3,8 +3,7 @@ title: Vue Contributor Days
 date: Wed Jun 06 2018 06:00:00 GMT+0400 (PST)
 hard-coded-date: 'June 6th, 2018'
 location: Silicon Valley
-author: ben-lesh
-apply: https://goo.gl/forms/ZHeeaJmjiJgYH0Vv2
+apply: https://goo.gl/forms/h4dQKnCyD6zA5gyW2
 framework: vue
 leads:
   - evan-you
