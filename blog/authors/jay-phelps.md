@@ -1,6 +1,6 @@
 ---
 name: Jay Phelps
-title: RxJs Core Team
+title: Co-founder and Software Architect at This Dot 
 github: https://github.com/jayphelps
 image: /media/people/jay-phelps.jpg
 ---

@@ -1,7 +1,9 @@
 <section class="container content-section">
   <div class="row upcoming-days">
     {{#each (sort-by 'date:desc' model.events) as |event|}}
-      {{event-card event=event}}
+      {{#unless event.isPast}}
+        {{event-card event=event}}
+      {{/unless}}
     {{/each}}
   </div>
 

@@ -13,6 +13,7 @@ Router.map(function() {
   });
   this.route('about');
   this.route('sponsors');
+  this.route('archived-contributor-day', { path: '/past-contributor-days/:event'});
 });
 
 export default Router;

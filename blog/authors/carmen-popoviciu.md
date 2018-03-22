@@ -1,6 +1,6 @@
 ---
 name: Carmen Popoviciu
-title: Angular Speaker
+title: Front-end Engineer
 twitter: carmenpopoviciu
 github: https://github.com/CarmenPopoviciu
 image: /media/people/carmen-popoviciu.jpg

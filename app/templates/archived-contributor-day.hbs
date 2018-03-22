@@ -15,8 +15,6 @@
         {{model.hardCodedDate}}
       {{else if model.date}}
         {{moment-format model.date (get (t 'human-date-format') "string")}}
-      {{else}}
-        TBA
       {{/if}}
     </div>
     <div class="col-md-3 framework-meta">
@@ -39,27 +37,6 @@
       </div>
     </div>
   {{/if}}
-</section>
-
-<section class="container framework-sign-up">
-  <div class="row">
-    <div class="col-md-4">
-      <h2>Updates</h2>
-      {{#each (sort-by 'date:desc' updates) as |post|}}
-        {{article-card post=post showContent=false}}
-      {{/each}}
-      {{#if model.isApplyOpen}}
-        <h2>Apply</h2>
-        <p>Applications are open for {{model.title}}.</p>
-        <p>
-          <a href="{{model.apply}}" target="_blank" class="button action-button">
-            Apply
-          </a>
-        </p>
-      {{/if}}
-    </div>
-    {{email-subscribe class="col-md-8" event=event.id}}
-  </div>
 </section>
 
 {{#if model.videos}}
@@ -110,20 +87,5 @@
         </div>
       {{/each}}
     </div>
-  </section>
-{{/if}}
-
-{{#if model.pastEvents}}
-  <section class="container framework-archive">
-    <h2>Past events</h2>
-    <ul>
-      {{#each model.pastEvents as |pastEvent|}}
-        <li>
-          {{#link-to "archived-contributor-day" pastEvent.id}}
-            {{pastEvent.name}}
-          {{/link-to}}
-        </li>
-      {{/each}}
-    </ul>
   </section>
 {{/if}}

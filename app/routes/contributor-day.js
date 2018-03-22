@@ -4,7 +4,7 @@ import ScrollTop from '../mixins/scroll-top';
 
 let days = {
   rxjs: 'contributor-day-rxjs-2017',
-  angular: 'contributor-day-angular-2017-apr',
+  angular: 'contributor-day-angular-2018',
   react: 'contributor-day-react-2017',
   vue: 'contributor-day-vue-2018-june'
 };

@@ -22,6 +22,8 @@ export default Page.extend({
   message: attr('string'),
   sponsors: attr('array'),
 
+  pastEvents: attr(),
+
   isPast: computed('date', function() {
     let today = moment();
     let eventDate = moment(this.get('date'));
