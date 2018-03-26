@@ -23,7 +23,8 @@ attendees:
     - vincent-ogloblinsky
     - jeff-cross
     - eric-simons
+    - jeremy-wilken
 past-events:
     - id: contributor-day-angular-2017-apr
-      name: Angular Contributor days 2017 
+      name: Angular Contributor days 2017
 ---
