@@ -1,6 +1,6 @@
 ---
 name: Stephen Fluin
-title: Developer Advocate for Angular @ Google
+title: Angular Core team, Developer Advocate for Angular @ Google
 twitter: stephenfluin
 github: https://github.com/StephenFluin
 image: /media/people/stephen-fluin.jpg

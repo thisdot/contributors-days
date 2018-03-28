@@ -1,6 +1,6 @@
 ---
 name: Hans Larsen
-title: Senior Software Engineer at Google
+title: Angular Core team, Senior Software Engineer at Google
 twitter: hanslatwork
 github: https://github.com/hans
 image: /media/people/hans-larsen.jpg
