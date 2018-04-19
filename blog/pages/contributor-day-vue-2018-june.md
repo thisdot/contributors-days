@@ -2,7 +2,7 @@
 title: Vue Contributor Days
 date: Wed Jun 06 2018 06:00:00 GMT+0400 (PST)
 hard-coded-date: '6am PST / 9am EST on June 6th, 2018.'
-location: Silicon Valley
+location: Online
 apply: https://goo.gl/forms/h4dQKnCyD6zA5gyW2
 framework: vue
 leads:
