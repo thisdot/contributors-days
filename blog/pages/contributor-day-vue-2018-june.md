@@ -12,6 +12,7 @@ leads:
   - thorsten
   - tracy-lee
 attendees:
+  - rahul-kadyan
   - sebastien-chopin
   - alexandre-chopin
   - pooya
